@@ -1,0 +1,10 @@
+可以排序的类都实现了java.lang.Comparable接口,comparable接口只有一个方法
+public int compareTo(object obj)
+该方法：
+返回0 表示this == obj
+返回正数表示 this > obj
+返回负数表示 this < obj
+实现了comparable接口的类通过实现comparaTo方法从而确定该类对象的排序方式
+
+中间可以调用string类写好的comparable()取巧使用以替代
+实现了comparable接口的comparable()方法 
