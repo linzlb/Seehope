@@ -4,7 +4,7 @@ package com.regexp;
  * @author 林政利
  * @Date 2015.07.10修改
  * @function 计算某文件夹下.java结尾的代码行数
- * add to git in 20180708pm by 798648334@qq.com
+ * add to https://github.com/linzlb/Seehope in 20180708pm by 798648334@qq.com
  */
 
 import java.io.BufferedReader;
