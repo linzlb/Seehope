@@ -9,25 +9,25 @@ merge by linzlb in github
 */
 public class Test {
 	public static void main(String[] args) {
-		//å½“å‰æ—¥æœŸ
+		//µ±Ç°ÈÕÆÚ
 		Date date = new Date();
 		System.out.println(date);
-		//è½¬æ¢å½“å‰æ—¥æœŸåˆ°æœ¬åœ°æ—¥æœŸ
+		//×ª»»µ±Ç°ÈÕÆÚµ½±¾µØÈÕÆÚ
 		System.out.println(date.toLocaleString());
-		//è½¬æ¢å½“å‰æ—¥æœŸåˆ°å›½é™…æ—¥æœŸ
+		//×ª»»µ±Ç°ÈÕÆÚµ½¹ú¼ÊÈÕÆÚ
 		System.out.println(date.toGMTString());
-		//å¾—åˆ°æ—¥æœŸå’Œæ—¶é—´
+		//µÃµ½ÈÕÆÚºÍÊ±¼ä
 		int year = date.getYear();
-		int month = date.getMonth() + 1;// æœˆæ˜¯ä»0å¼€å§‹è®¡æ•°çš„ï¼Œæ‰€ä»¥è¦åŠ 1
+		int month = date.getMonth() + 1;// ÔÂÊÇ´Ó0¿ªÊ¼¼ÆÊıµÄ£¬ËùÒÔÒª¼Ó1
 		int day = date.getDate();
         int hour = date.getHours();
 		int minute = date.getMinutes();
 		int second = date.getSeconds();
 		int weekday = date.getDay();
-		System.out.println( 1900+year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second + " æ˜ŸæœŸ" + weekday );
+		System.out.println( 1900+year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second + " ĞÇÆÚ" + weekday );
 		
-		System.out.println(new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ï¼ŒHH:mm:ss.SSS").format(new Date()));
-		System.out.println(new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥").format(new Date()));
+		System.out.println(new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ£¬HH:mm:ss.SSS").format(new Date()));
+		System.out.println(new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ").format(new Date()));
 		System.out.println(new SimpleDateFormat("HH:mm:ss.SSS").format(new Date()));
 	}
 }

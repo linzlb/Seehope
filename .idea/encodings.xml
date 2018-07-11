@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/date/Test.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/paixu/Demo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/regexp/CodeCounter.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/regexp/Demo1.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/regexp/Test.java" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>
