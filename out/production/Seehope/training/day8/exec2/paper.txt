@@ -1,6 +1,0 @@
-1.static和final能一起使用么?
-A.能|B.不能
-*A#
-2.下面正确声明一个一维数组的是?
-A.String [] a|B.String a[]|C.char a[][]|D.String a[10] 
-*A-B  
