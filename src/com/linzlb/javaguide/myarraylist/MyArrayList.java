@@ -48,6 +48,8 @@ public class MyArrayList {
         if (size == elementData.length){
             //需要扩容，扩容1.5倍, 注意old值为1的时候
             int oldCapacity = elementData.length;
+            //将oldCapacity 右移一位，其效果相当于oldCapacity /2，
+            //我们知道位运算的速度远远快于整除运算，整句运算式的结果就是将新容量更新为旧容量的1.5倍，
             int newCapacity = oldCapacity + (oldCapacity >> 1);
             //如果新容量 < 最小容量 ，将最小容量赋值给新容量
             //如果 oldCapacity=1，则 minCapacity=1+1=2 newCapacity=1+(1>>1)=1
