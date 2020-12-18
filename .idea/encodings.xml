@@ -2,7 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/algorithm/Factorial.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/enum_/PinType.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/enum_/PizzaStatus.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/enum_/Test.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/myhashmap/MyEntry.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/myhashmap/MyHashMap.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/javaguide/myhashmap/MyMap.java" charset="UTF-8" />
