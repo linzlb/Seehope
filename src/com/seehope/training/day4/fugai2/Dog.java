@@ -4,7 +4,7 @@ public class Dog extends Animal{
 
 	public String name = "dog";
 	public Bone eat(){
-		System.out.println("�Թ�ͷ");
+		System.out.println("dog eat");
 		return new Bone();
 	}
 }

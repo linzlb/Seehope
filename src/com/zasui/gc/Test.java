@@ -2,10 +2,10 @@ package com.zasui.gc;
 
 public class Test {
 	public static void main( String [] args ){
-		for( int i = 0; i < 5; i ++ ){
+		for( int i = 0; i < 500; i ++ ){
 			Car c = new Car();
-			//System.gc()·½·¨,ÄÜ½¨ÒéJVM½øÐÐÀ¬»ø»ØÊÕ,µ«ÊÇ²»ÄÜÇ¿ÖÆÀ¬»ø»ØÊÕ£¨»ØÊÕÊ±¼äÓÉJVM¾ö¶¨£©
-			//¿ÉÒÔ¿´µ½Ã¿´ÎÖ´ÐÐµÄ½á¹û¶¼²»Ò»Ñù£¬»ØÊÕcar±äÁ¿¶¼´ÎÊý²»ÊÇ¹Ì¶¨µÄ
+			//System.gc()æ–¹æ³•,èƒ½å»ºè®®JVMè¿›è¡Œåžƒåœ¾å›žæ”¶,ä½†æ˜¯ä¸èƒ½å¼ºåˆ¶åžƒåœ¾å›žæ”¶ï¼ˆå›žæ”¶æ—¶é—´ç”±JVMå†³å®šï¼‰
+			//å¯ä»¥çœ‹åˆ°æ¯æ¬¡æ‰§è¡Œçš„ç»“æžœéƒ½ä¸ä¸€æ ·ï¼Œå›žæ”¶carå˜é‡éƒ½æ¬¡æ•°ä¸æ˜¯å›ºå®šçš„
 			System.gc();
 		}
 	}
@@ -13,10 +13,10 @@ public class Test {
 
 class Car{
 	static int count = 0;
-	//finalize·½·¨£¬Õâ¸ö·½·¨»áÔÚ¶ÔÏó±»»ØÊÕÊ±×Ô¶¯±»µ÷ÓÃ
+	//finalizeæ–¹æ³•ï¼Œè¿™ä¸ªæ–¹æ³•ä¼šåœ¨å¯¹è±¡è¢«å›žæ”¶æ—¶è‡ªåŠ¨è¢«è°ƒç”¨
 	protected void finalize() throws Throwable
 	{
 		this.count ++;
-		System.out.println( "»ØÊÕCarÀàÐÍ±äÁ¿" + this.count + "´Î" );
+		System.out.println( "å›žæ”¶Carç±»åž‹å˜é‡" + this.count + "æ¬¡" );
 	}
 }

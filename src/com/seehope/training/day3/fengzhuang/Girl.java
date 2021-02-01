@@ -1,8 +1,7 @@
 package com.seehope.training.day3.fengzhuang;
 
 public class Girl {
-	//���Ǳ�private���ε����Ժͷ���
-	//�����ڱ���ʹ��
+
 	//protected String name;
 
 	private String name;
@@ -26,6 +25,6 @@ public class Girl {
 	}
 	
 	private void thinkIdea(){
-		System.out.println("HI, �ҵ����ֽ�"+this.name+"!�ҵ��뷨.");
+		System.out.println("HI, "+this.name+"!");
 	}
 }

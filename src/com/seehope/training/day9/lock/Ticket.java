@@ -1,7 +1,5 @@
 package com.seehope.training.day9.lock;
 
-//ģ����Ʊϵͳ
-
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 

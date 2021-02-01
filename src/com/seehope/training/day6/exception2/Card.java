@@ -4,14 +4,10 @@ public class Card {
 	private String id;
 	private int balance;
 	
-	/**
-	 * ���ܳ���5000
-	 * @param money
-	 * @return
-	 */
+
 	public int deposit(int money)throws CardException{
 		if(money > 5000){
-			throw new CardException("һ�첻�ܳ���5000");
+			throw new CardException("money>5000");
 		}
 		this.balance += money;
 		return this.balance;

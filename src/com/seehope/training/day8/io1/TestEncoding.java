@@ -4,8 +4,8 @@ import java.io.UnsupportedEncodingException;
 
 public class TestEncoding {
 	public static void main(String[] args) {
-		String str = "�й�";
-		String str2 = "�ձ�";
+		String str = "翠雯";
+		String str2 = "政利";
 		try{
 			byte[] b = str.getBytes("utf8");
 			System.out.println(b.length );

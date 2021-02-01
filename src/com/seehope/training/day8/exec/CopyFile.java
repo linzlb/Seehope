@@ -1,5 +1,3 @@
-/*�����ļ�*/
-
 package com.seehope.training.day8.exec;
 
 import java.io.FileInputStream;
@@ -27,8 +25,7 @@ public class CopyFile {
 					false, 
 					descurl);
 		
-			int data = -1; //��ȡ���ֽ���
-			//����һƬ�ռ�
+			int data = -1;
 			byte[] buf = new byte[1024];
 			//byte[] buf = new byte[1024*1024];
 			while(-1 != (data = fis.read(buf))) {
@@ -47,8 +44,6 @@ public class CopyFile {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("��ʼcopy");
 		CopyFile.copyfile();
-		System.out.println("copy���");
 	}
 }

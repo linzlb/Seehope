@@ -10,7 +10,7 @@ public class Test {
 			c.deposit(50000);
 		} catch (CardException e) {
 			e.printStackTrace();
-			System.out.println("�쳣��Ϣ:"+e.getMessage());
+			System.out.println("msg:"+e.getMessage());
 		}
 	}
 

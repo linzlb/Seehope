@@ -14,7 +14,7 @@ public class Animal implements Comparable {
 	
 	@Override
 	public int hashCode() {
-		System.out.println("hashCode...(Animal.java�����)");
+		System.out.println("hashCode...(Animal.java)");
 		return this.name.hashCode() ^ this.score;
 	}
 

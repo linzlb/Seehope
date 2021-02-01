@@ -10,6 +10,6 @@ public class People {
     }  
       
     public String toString(){  
-        return "������"+this.name+" ���䣺"+this.age;  
+        return "name="+this.name+" age="+this.age;
     }  
 }

@@ -37,19 +37,19 @@ public class Star {
 
 	public static class Earth extends Star {
 		public void action(){
-			System.out.println("�ʺ������ס");
+			System.out.println("earth");
 		}
 	}
 
 	public static class Sun extends Star {
 		public void action(){
-			System.out.println("����������Դ");
+			System.out.println("sun");
 		}
 	}
 
 	public static class Moon extends Star {
 		public void action(){
-			System.out.println("����������϶�");
+			System.out.println("moon");
 		}
 	}
 	

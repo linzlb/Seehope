@@ -1,20 +1,17 @@
 package com.seehope.training.day8.exec2;
-/*
- * Student��     ѧ����
- * ���ԣ�����   һ�Ŵ��   һ�ſ��� 
- */
+
 public class Student {
-	//private String name;
+	private String name;
 	private Paper paper;
 	private AnswerSheet answerSheet;
 	
-//	public String getName() {
-//		return name;
-//	}
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public Paper getPaper() {
 		return paper;

@@ -7,8 +7,7 @@ public class Test {
 		
 		Food f1 = a.eat();
 		Food f2 = a2.eat();
-		
-		//�������Ϊʲô��animal����ģ�û�б�����
+
 		System.out.println(a.name);
 		System.out.println(a2.name);
 		

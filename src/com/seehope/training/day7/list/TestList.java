@@ -24,14 +24,14 @@ public class TestList {
 		l.add(stu4);
 		l.add(stu5);
 		
-		for(Object o : l){            //foreachѭ��
+		for(Object o : l){            //foreach
 			System.out.println(o);
 		}
 		
 		System.out.println("�����...");
 		Collections.sort(l, new MyComparator());
 
-		for(Object o : l){             //foreachѭ��
+		for(Object o : l){             //foreach
 			System.out.println(o);
 		}
 	}

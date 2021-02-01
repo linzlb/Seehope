@@ -7,18 +7,15 @@ public class Test {
 	}
 	
 	public static void fun(){
-		// Animal�Ǳ���ʱ����
-		// Cat������ʱ����
 		Animal a1 = new Cat();
 		Animal a2 = new Dog();
-		
-		System.out.println(a1.getClass().getName()); //����̫��ȷ�ˡ�
+		System.out.println(a1.getClass().getName());
 		
 		if (a1 instanceof Cat) {
-			System.out.println("a1��Cat����");
+			System.out.println("a1 cat");
 		}
 		if (a1 instanceof Animal) {
-			System.out.println("a1��Animal����");
+			System.out.println("a1 Animal");
 		}
 		a1.eat();
 		a1.finaleat();

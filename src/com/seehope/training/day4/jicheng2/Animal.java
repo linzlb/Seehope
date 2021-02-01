@@ -5,7 +5,7 @@ public class Animal {
 	public String name;
 	
 //	public Animal(){
-//		System.out.println("animal���췽����");
+//		System.out.println("animal");
 //	}
 	
 	public Animal(String name){

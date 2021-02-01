@@ -42,21 +42,21 @@ public class HashMapDemo01 {
             System.out.println(myent.getKey()+"-->"+myent.getValue());  
         }  
         System.out.println("---------------------------------------");
-        //jdk1.5��Ҳ���������
+        //jdk1.5
         for (Map.Entry<String, Integer> my:map.entrySet()){  
             System.out.println(my.getKey()+"-->"+my.getValue());  
         } 
         System.out.println("+++++++++++++++++++++++++++++++++++++++");
-        //ʹ�÷�ϵͳ����Ϊkey
+
         Map<String,People> map2 = new HashMap<String,People>();
-        map2.put("zf", new People("����",30));      
+        map2.put("zf", new People("linlin",30));
         System.out.println(map2); 
         System.out.println(map2.get("zf"));  
         System.out.println(map2.get(new String("zf"))); 
         System.out.println("---------------------------------------");
         Map<People,String> map3 = new IdentityHashMap<People,String>();     
-        map3.put(new People("����",30),"zf" );  
-        map3.put(new People("����",30),"zf" );         
+        map3.put(new People("xiecuiwen",30),"zf" );
+        map3.put(new People("linzlb",30),"zf" );
         System.out.println(map3);    
 	}
 

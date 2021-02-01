@@ -11,7 +11,7 @@ public class zidingyi<T> {
 		Date d = new Date();
 		test.printType(d);
 		
-		zidingyi<String> test2 = new zidingyi<String>();
+		zidingyi<String> test2 = new zidingyi<>();
 		String s = "linlin";
 		test2.printType(s);
 	}

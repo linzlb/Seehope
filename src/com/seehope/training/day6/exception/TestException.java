@@ -18,12 +18,11 @@ public class TestException {
 			//Class c = Class.forName("Student");
 			System.out.println("--------");
 		} catch (Exception e) {
-			System.out.println("��û���ҵ�...");
+			System.out.println("catch...");
 		} finally {
-			System.out.println("�ͷ���Դ....");//һ����ִ��
+			System.out.println("finally....");
 		}
-
-		System.out.println("����ִ��");
+		System.out.println("end");
 	}
 	
 	public static void chufa(int a, int b){
@@ -34,6 +33,6 @@ public class TestException {
 
 class Student {
 	public void study() {
-		System.out.println("study����");
+		System.out.println("study");
 	}
 }

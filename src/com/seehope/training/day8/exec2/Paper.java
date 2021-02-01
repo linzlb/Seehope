@@ -15,10 +15,8 @@ import java.util.TreeMap;
 
 public class Paper {
 	private static Paper paper = new Paper();
-	
-	
-	private TreeMap<Integer,Question> questions = 
-		new TreeMap<Integer,Question>();
+
+	private TreeMap<Integer,Question> questions = new TreeMap<Integer,Question>();
 
 	public TreeMap<Integer, Question> getQuestions() {
 		return questions;
@@ -43,7 +41,6 @@ public class Paper {
 	}
 	
 	public static Paper createPaper() {
-		//��������
 		InputStream is = null;
 		InputStreamReader isr = null;
 		BufferedReader br = null;
@@ -76,17 +73,12 @@ public class Paper {
 					key.add(k);
 				}
 				q.setKeys(key);
-				
-				
 				Paper.paper.questions.put(q.getId(), q);
 			}
 			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
 		return Paper.paper;
 	}
-	
-	
 }

@@ -26,20 +26,20 @@ public class Test {
 	
 	}
 	public void fun1() throws IOException{
-		//throw new IOException("�ļ���������");
+		//throw new IOException("fun1() exception");
 	}
 	public void fun2()throws CloneNotSupportedException{
-		throw new CloneNotSupportedException("���಻֧�ֿ�¡");
+		throw new CloneNotSupportedException("fun2() exception");
 	}
 
 	public void fun3()throws InstantiationException{
-		throw new InstantiationException("����ʵ����");
+		throw new InstantiationException("fun3() exception");
 	}
 	public void fun4()throws EarthquakeException{
-		throw new EarthquakeException("������");
+		throw new EarthquakeException("fun4() exception");
 	}
 	public void fun5()throws CardException{
-		throw new CardException("����");
+		throw new CardException("fun5() exception");
 	}
 }
 class EarthquakeException extends Exception{

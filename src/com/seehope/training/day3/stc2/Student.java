@@ -24,7 +24,6 @@ public class Student {
 	public Student(String name) {
 		this.name = name;
 		nums++;
-
 	}
 
 }

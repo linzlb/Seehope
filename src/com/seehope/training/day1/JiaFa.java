@@ -1,5 +1,8 @@
 package com.seehope.training.day1;
 
+/**
+ * 1+2+...+n
+ */
 public class JiaFa {
 	public static void main(String[] args) {
 		sumFor(100);

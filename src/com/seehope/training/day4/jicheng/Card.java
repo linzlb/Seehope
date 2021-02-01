@@ -2,9 +2,7 @@ package com.seehope.training.day4.jicheng;
 
 import java.util.Date;
 
-/*
- * �����˻�
- */
+
 public class Card {
 	private String id ;
 	private String passwd;
@@ -74,8 +72,7 @@ public class Card {
 		return "HBS" + new Date().getTime()+(int)(Math.random()*1000);
 	}
 	
-	/*-------------��Ϊ----------------*/
-	
+
 	public double deposit(double money){
 		return 0 ;
 		

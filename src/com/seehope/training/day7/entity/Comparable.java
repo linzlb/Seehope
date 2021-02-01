@@ -1,7 +1,7 @@
 package com.seehope.training.day7.entity;
 
 public interface Comparable {
-	//0��this.getAge == o.getAge()һ����
+	//0,this.getAge == o.getAge()
 	//+n,this.getAge > o.getAge()
 	//-n,this.getAge < o.getAge()
 	

@@ -6,7 +6,6 @@ public class MyStack2{
 	void push(char c){
 		/*data[point] = c;
 		point++;*/
-		//������ԭʼ�������ͬ��
 		synchronized (this) {
 			data[point] = c;
 			point++;
@@ -15,7 +14,6 @@ public class MyStack2{
 	char pop(){
 		/*point--;
 		return data[point];*/
-		//������ԭʼ�������ͬ��
 		synchronized (this) {
 			point--;
 			return data[point];
@@ -34,7 +32,7 @@ public class MyStack2{
 		ms.push('e');
 		ms.push('f');
 		ms.push('g');
-		System.out.println("ջ�ĳ���Ϊ��"+ms.len());
+		System.out.println("len"+ms.len());
 		int len = ms.len();
 		for(int i = 0;i<len;i++){
 			System.out.print(ms.pop()+"  ");

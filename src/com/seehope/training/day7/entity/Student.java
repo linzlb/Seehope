@@ -6,7 +6,7 @@ public class Student implements Comparable {
 	
 	@Override
 	public int compareTo(Object o) {
-		System.out.println("compareTo����..");
+		System.out.println("compareTo..");
 		Student s = (Student)o;
 		return this.score - s.score;
 		
@@ -14,7 +14,7 @@ public class Student implements Comparable {
 	
 	@Override
 	public int hashCode() {
-		System.out.println("hashCode...(Student.java�����)");
+		System.out.println("hashCode...(Student.java)");
 		return this.name.hashCode() ^ this.score;
 	}
 

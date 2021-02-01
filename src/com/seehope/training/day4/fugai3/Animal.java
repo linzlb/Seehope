@@ -4,7 +4,7 @@ public class Animal {
 	
 	public String name = "zhengli";
 	protected Food eat(){
-		System.out.println("�Զ���");
+		System.out.println("animal eat");
 		return new Food();
 	}
 

@@ -1,10 +1,10 @@
 package com.zasui.regexp;
 
 /**
- * @author ÁÖÕşÀû
- * @Date 2015.07.10ĞŞ¸Ä
- * @function ¼ÆËãÄ³ÎÄ¼ş¼ĞÏÂ.java½áÎ²µÄ´úÂëĞĞÊı
- * add to https://github.com/linzlb/Seehope in 20180708pm by 798648334@qq.com
+ * @author æ—æ”¿åˆ©
+ * @Date 2015.07.10ä¿®æ”¹
+ * @function è®¡ç®—æŸæ–‡ä»¶å¤¹ä¸‹.javaç»“å°¾çš„ä»£ç è¡Œæ•°ï¼ˆå»æ‰æ³¨é‡Šï¼‰
+ * add to https://github.com/linzlb/Seehope in 20180708pm by linzlb@qq.com
  */
 
 import java.io.BufferedReader;
@@ -17,56 +17,61 @@ import java.util.Date;
 
 public class CodeCounter {
 
-	private static long normalLines = 0;//Õı³£´úÂë
-	private static long commentLines = 0;//×¢ÊÍ´úÂë
-	private static long whiteLines = 0;//¿Õ°×ĞĞ
+	private static long normalLines = 0;//æ­£å¸¸ä»£ç 
+	private static long commentLines = 0;//æ³¨é‡Šä»£ç 
+	private static long whiteLines = 0;//ç©ºç™½è¡Œ
 	private static String url;
+	private static String javaRegex = ".*\\.java$";
+	private static String kongRegex = "^[\\s&&[^\\n]]*$";
+
 
 	public static void main(String[] args) {
-		url = "/Users/linzlb/intellij_idea_workspace/Seehope";
+		url = "/Users/linzlb/intellij_idea_workspace";
+		CodeCounter.show();
+		url = "/Users/linzlb/eclipse_workspace";
 		CodeCounter.show();
 	}
-	
-	//Õ¹Ê¾£º
+
+	//å±•ç¤ºï¼š
 	private static void show(){
-		System.out.println(new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ£¬HH:mm:ss.SSS").format(new Date()) + ",¿ªÊ¼¼ÆËã");
+		System.out.println(new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ï¼ŒHH:mm:ss.SSS").format(new Date()) + ",å¼€å§‹è®¡ç®—");
 		cp(url);
-		//System.out.println(new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ£¬HH:mm:ss.SSS").format(new Date()) + ",Íê³É¼ÆËã£¬¿ªÊ¼ÏÔÊ¾");
-		
-		//²âÊÔ·¢ÏÖ´òÓ¡ÉÙÁ¿»¹ÊÇºÜ¿ìµÄ£¬1ºÁÃëÄÚ¿ÉÒÔÍê³É
-		System.out.println(url+"ÎÄ¼ş¼ĞÏÂ¹²ÓĞJava´úÂë£º");
-		System.out.println("´úÂënormalLines:" + normalLines +"ĞĞ");
-		System.out.println("×¢ÊÍcommentLines:" + commentLines +"ĞĞ");
-		System.out.println("¿Õ°×ĞĞwhiteLines:" + whiteLines +"ĞĞ");
-		System.out.println(new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ£¬HH:mm:ss.SSS").format(new Date()) + ",Íê³É");
-	
+		//System.out.println(new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ï¼ŒHH:mm:ss.SSS").format(new Date()) + ",å®Œæˆè®¡ç®—ï¼Œå¼€å§‹æ˜¾ç¤º");
+
+		//æµ‹è¯•å‘ç°æ‰“å°å°‘é‡è¿˜æ˜¯å¾ˆå¿«çš„ï¼Œ1æ¯«ç§’å†…å¯ä»¥å®Œæˆ
+		System.out.println(url+"æ–‡ä»¶å¤¹ä¸‹å…±æœ‰Javaä»£ç ï¼š");
+		System.out.println("ä»£ç normalLines:" + normalLines +"è¡Œ");
+		System.out.println("æ³¨é‡ŠcommentLines:" + commentLines +"è¡Œ");
+		System.out.println("ç©ºç™½è¡ŒwhiteLines:" + whiteLines +"è¡Œ");
+		System.out.println(new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ï¼ŒHH:mm:ss.SSS").format(new Date()) + ",å®Œæˆ");
+
 	}
-	
-	//½«´«½øÀ´µÄÂ·¾¶×ª»¯ÎªÎÄ¼şĞÎÊ½²¢µ÷ÓÃ¼ÆËã·½·¨¡£
+
+	//å°†ä¼ è¿›æ¥çš„è·¯å¾„è½¬åŒ–ä¸ºæ–‡ä»¶å½¢å¼å¹¶è°ƒç”¨è®¡ç®—æ–¹æ³•ã€‚
 	private static void cp(String url){
 		File f = new File(url);
 		compute(f);
 	}
-	
-	//½«´«½øÀ´µÄÎÄ¼ş¼ĞÖĞµÄÎÄ¼şºÍ×ÓÎÄ¼ş¼ĞÖĞµÄÎÄ¼ş°¤¸ö´«¸øËã´úÂëĞĞÊıµÄ·½·¨
+
+	//å°†ä¼ è¿›æ¥çš„æ–‡ä»¶å¤¹ä¸­çš„æ–‡ä»¶å’Œå­æ–‡ä»¶å¤¹ä¸­çš„æ–‡ä»¶æŒ¨ä¸ªä¼ ç»™ç®—ä»£ç è¡Œæ•°çš„æ–¹æ³•
 	private static void compute(File file){
 		if(file.isFile()) {
-			//ÏÂÃæ2ÖÖĞ´·¨¶¼¿ÉÒÔ
+			//ä¸‹é¢2ç§å†™æ³•éƒ½å¯ä»¥
 			//if(file.getName().endsWith(".java")){
-			if(file.getName().matches(".*\\.java$")) {
+			if(file.getName().matches(javaRegex)) {
 				parse(file);
 			}
 			return;
 		}
-		
+
 		File[] codeFiles = file.listFiles();
 		assert codeFiles != null;
 		for(File child : codeFiles) {
 			compute(child);
 		}
-		
+
 		/*
-		 *Ô­Ê¼´úÂë£¬Ö»ÄÜ¿´Ò»¸öÎÄ¼ş¼ĞÏÂµÄ¡£ÎÄ¼ş¼ĞÏÂÎÄ¼ş¼ĞµÄ¾Í¿´²»µ½£¬ÎªÊ²Ã´£¿£¿
+		 *åŸå§‹ä»£ç ï¼Œåªèƒ½çœ‹ä¸€ä¸ªæ–‡ä»¶å¤¹ä¸‹çš„ã€‚æ–‡ä»¶å¤¹ä¸‹æ–‡ä»¶å¤¹çš„å°±çœ‹ä¸åˆ°ï¼Œä¸ºä»€ä¹ˆï¼Ÿï¼Ÿ
 		 * File[] codeFiles = file.listFiles();
 			for(File child : codeFiles){
 			if(child.getName().matches(".*\\.java$")) {
@@ -75,23 +80,23 @@ public class CodeCounter {
 			}
 		}*/
 	}
-	
-	//¶Á´«½øÀ´µÄÎÄ¼şÖĞµÄ´úÂëĞĞÊı
+
+	//è¯»ä¼ è¿›æ¥çš„æ–‡ä»¶ä¸­çš„ä»£ç è¡Œæ•°
 	private static void parse(File f) {
 		BufferedReader br = null;
-		boolean comment = false;//ÅĞ¶ÏÊÇ·ñÎª×¢ÊÍ
+		boolean comment = false;//åˆ¤æ–­æ˜¯å¦ä¸ºæ³¨é‡Š
 		try {
 			br = new BufferedReader(new FileReader(f));
 			String line;
 			while(null != (line = br.readLine())) {
-				line = line.trim();//·ÀÖ¹tab¼ü£¬¿Õ¸ñºó²Å¿ªÊ¼×¢ÊÍµÄ¾ä×Ó±»Ëã³É´úÂë
-				if(line.matches("^[\\s&&[^\\n]]*$")) {
+				line = line.trim();//é˜²æ­¢tabé”®ï¼Œç©ºæ ¼åæ‰å¼€å§‹æ³¨é‡Šçš„å¥å­è¢«ç®—æˆä»£ç 
+				if(line.matches(kongRegex)) {
 					whiteLines ++;
 				} else if (line.startsWith("/*") && !line.endsWith("*/")) {
 					commentLines ++;
 					comment = true;
 				} else if (line.startsWith("/*") && !line.endsWith("*/")) {
-					//¿¼ÂÇÖ»ÓÃÕâ¸ö×¢ÊÍÁË1ĞĞµÄ
+					//è€ƒè™‘åªç”¨è¿™ä¸ªæ³¨é‡Šäº†1è¡Œçš„
 					commentLines ++;
 				} else if (comment) {
 					commentLines ++;

@@ -9,11 +9,10 @@ public class LenovoComputer extends Computer implements IUsb{
 	}
 	
 	public void calculate(){
-		System.out.println("���㡣������������");
+		System.out.println("calculate");
 		
 	}
 	public void usb(){
-		//������ˣ�������������������������������
 		this.usb.usb();
 	}
 }

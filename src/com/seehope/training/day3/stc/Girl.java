@@ -1,21 +1,21 @@
 package com.seehope.training.day3.stc;
-//ִ���꾲̬�����֮�����ζ���������ɡ�
+
 public class Girl {
 	public static int nums = 5;
 	
 	static {
-		System.out.println("Girl�౻�����ˡ���");
+		System.out.println("Girl static{}");
 	}
 	{
-		System.out.println("Girl�౻��������");
+		System.out.println("Girl {}");
 	}
 	
 	public Girl(){
-		System.out.println("Girl()����..");
+		System.out.println("Girl Girl()");
 	}
 	
 	public static void action(){
-		System.out.println("action..");
+		System.out.println("Girl action..");
 	}
 
 }

@@ -1,8 +1,11 @@
 package com.seehope.training.day2;
 
+/**
+ * 数组
+ */
 public class TestArray{
 	public static void main(String[] args){
-		testArray3();	
+		testArray4();
 	}
 
 	public static void testClone(){
@@ -15,7 +18,6 @@ public class TestArray{
 	}
 	
 	public static void testArray1(){
-		//����
 		int[] arry = {1, 2, 3};
 		System.out.println(arry[2]);
 		for(int i = 0; i < arry.length; i++){
@@ -45,13 +47,11 @@ public class TestArray{
 
 	public static void testArray4(){
 		int[] arry = {0,0};
-		System.out.println("��ʼ...");
 		for(int i = 0; i < arry.length; i++){
 			System.out.print(arry[i] + " ");
 		}	
 		System.out.println();
 		arry = new int[3];
-		System.out.println("���...");
 		for(int i = 0; i < arry.length; i++){
 			System.out.print(arry[i] + " ");
 		}	
@@ -65,8 +65,7 @@ public class TestArray{
 	public static void testArray5(){
 		int[] arraySrc = {18,19,20,30,100};
 		int[] arrayDest = new int[8];
-		
-		System.arraycopy(arraySrc,2, arrayDest, 5, 3);//destpos��6�Ļ����±�Խ���ˡ�
+		System.arraycopy(arraySrc,2, arrayDest, 5, 3);
 		for(int i = 0; i < arrayDest.length; i++){
 			System.out.print(arrayDest[i] + " ");
 		}	

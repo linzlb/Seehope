@@ -11,11 +11,11 @@ public class TreeMapDemo01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Map<String,Integer> map = new TreeMap<String,Integer>();  
-        //�ᰴ��key����
-        map.put("A��zhangsan", 1);  
-        map.put("A��zhangsan", 2);  
-        map.put("C��lisi", 3);  
-        map.put("B��wangwu", 5);  
+
+        map.put("zhangsan", 1);
+        map.put("zhangsan", 2);
+        map.put("lisi", 3);
+        map.put("wangwu", 5);
           
         System.out.println(map); 
 	}

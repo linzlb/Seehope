@@ -4,7 +4,7 @@ public class HPDriver implements Driver {
 
 	public void install() {
 		// TODO Auto-generated method stub
-		System.out.println("װHP����");
+		System.out.println("HPDriver");
 	}
 
 }

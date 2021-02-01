@@ -10,11 +10,11 @@ public class Test {
 		int s = sk.size();
 		System.out.println("sk ��С:" + sk.size());
 		for(int i = 0; i < s; i++){
-			//System.out.println("sk.peek()"+sk.peek());//�鿴ջ����������Ƴ���
+			//System.out.println("sk.peek()"+sk.peek());
 			System.out.println(sk.pop());
 			
 		}
-		System.out.println("sk ��С:" + sk.size());
+		System.out.println("sk size:" + sk.size());
 		System.out.println("--------------------");
 		MyQueue sq = new MyQueue();
 		sq.push(1);
@@ -22,7 +22,7 @@ public class Test {
 		sq.push(50);
 		sq.push(22);
 		int s2 = sq.size();
-		System.out.println("sq ��С:" + sq.size());
+		System.out.println("sq size:" + sq.size());
 		for(int i = 0; i < s2; i++){
 			//System.out.println(sk.peek());
 			System.out.println(sq.pop());

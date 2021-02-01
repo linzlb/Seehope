@@ -11,11 +11,10 @@ public class Girl {
 	}
 	
 	public Girl(){
-		System.out.println("���췽��������");
+		System.out.println("构造方法");
 	}
 	
 	{
-		System.out.println("��̬����顣����");
-		
+		System.out.println("静态方法");
 	}
 }

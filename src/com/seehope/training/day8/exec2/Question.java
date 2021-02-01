@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class Question {
 	private Integer id;
 	private String desc;
-	private ArrayList<String> choice;//����ѡ��
+	private ArrayList<String> choice;
 	private ArrayList<String> keys;
 	
 	public Integer getId() {

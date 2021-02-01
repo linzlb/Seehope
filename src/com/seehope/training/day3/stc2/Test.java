@@ -20,13 +20,13 @@ public class Test {
 		
 		Student[] stus = new Student[3];
 		for (int i = 0; i<stus.length; i++){
-			stus[i] = new Student("������" + (i+1) + "��");
+			stus[i] = new Student("xiecuiwen" + (i+1) + "~");
 		}
 		for (int i = 0; i<stus.length; i++){
 			//System.out.println("name:" +stus[i]);
 			System.out.println("name:" +stus[i].getName());
 		}
-		System.out.println("��������"+Student.getNums()+"��ͬѧ");
+		System.out.println("num="+Student.getNums()+".");
 	}
 
 }
