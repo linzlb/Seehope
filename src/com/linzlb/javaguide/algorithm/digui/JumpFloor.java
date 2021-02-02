@@ -5,7 +5,7 @@ package com.linzlb.javaguide.algorithm.digui;
  * @Tel: 13570921913
  * @Date: 2021/1/27 17:20
  * @Function:Fibonacci,跳台阶问题
- * 一只?一次可以跳上1级台阶，也可以跳上2级，求?跳上n级台阶总共有几种跳法。
+ * 一只青蛙一次可以跳上1级台阶，也可以跳上2级，求青蛙跳上n级台阶总共有几种跳法。
  * 分析：
  * 如果有2种跳法，1阶或2阶，
  *  1。第一次跳1阶，跳法是f(n-1)
@@ -13,8 +13,8 @@ package com.linzlb.javaguide.algorithm.digui;
  * 所以总跳法是f(n)=f(n-1)+f(n-2) ,f(1)=1,f(2)=2
  */
 public class JumpFloor {
-    //递归～
-    public int jumpFloor(int number){
+    //正常递归～ 缺点是会重复计算，所以时间复杂度是子问题个数*子问题需要的时间=O(2^n)
+    public static int jumpFloor(int number){
         if (number <= 0){
             return 0;
         }else if (number == 1){
@@ -26,7 +26,8 @@ public class JumpFloor {
     }
 
     //递归效率低，用迭代优化～
-    public int jumpFloor2(int number){
+    //实际上就是dp table的思想（循环迭代+备忘录，自底向上往上推，脱离了递归，时间复杂度O(N)）
+    public static int jumpFloor2(int number){
         if (number <= 0){
             return 0;
         }else if (number == 1){
@@ -49,5 +50,10 @@ public class JumpFloor {
     public int jumpFloor3(int number){
         //2^(n-1) 用位移操作，更快
         return 1<<--number;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(jumpFloor(20));
+        System.out.println(jumpFloor2(20));
     }
 }
