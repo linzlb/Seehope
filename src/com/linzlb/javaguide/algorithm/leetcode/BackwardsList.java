@@ -10,6 +10,7 @@ import com.linzlb.javaguide.algorithm.leetcode.ListNode;
  * 分析：
  * 链表倒数第k个节点就是正数的第 L-k+1 个节点
  *
+ * 快慢指针的应用：
  * 2个节点/指针，一个节点node1先开始跑，跑到k-1个节点后，
  * 第2个节点node2开始跑，当node1跑完，node2所指的节点就是正数的 L-k+1 个节点
  * 这种方式一次遍历就可以找到，时间复杂度O(n)
