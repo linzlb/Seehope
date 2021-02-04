@@ -15,7 +15,9 @@
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/BFS.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/LeftRightPointer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/NQueens.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/datastructure/LRUbyLinkedHashMap.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/SlidingWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/datastructure/lru/LRUbyLinkedHashMap.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/dynamicplanning/FindLongest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/seehope/training/day1/Chuanzhichuanzhi.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/seehope/training/day1/NiuNiu.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/seehope/training/day2/SortDemo.java" charset="GBK" />
@@ -26,6 +28,6 @@
     <file url="file://$PROJECT_DIR$/src/com/zasui/regexp/Demo1.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/zasui/regexp/Test.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/zasui/regexp/xiazaihtml/EmailParse.java" charset="UTF-8" />
-    <file url="PROJECT" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

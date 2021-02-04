@@ -7,8 +7,8 @@ import java.util.Map;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/2/4 09:27
- * @Function:»¬¶¯´°¿ÚËã·¨
- *  Çó×îĞ¡¸²¸Ç×Ö´®
+ * @Function:æ»‘åŠ¨çª—å£ç®—æ³•
+ *  æ±‚æœ€å°è¦†ç›–å­—ä¸²
  */
 public class SlidingWindow {
 
@@ -16,9 +16,9 @@ public class SlidingWindow {
         if (s == null || t == null || t.equals("")) {
             return "";
         }
-        // ×Ö·ûĞèÒª³öÏÖµÄ´ÎÊı
+        // å­—ç¬¦éœ€è¦å‡ºç°çš„æ¬¡æ•°
         Map<Character, Integer> needs = new HashMap<Character, Integer>();
-        // »¬¶¯´°¿ÚÖĞ×Ö·û³öÏÖµÄ´ÎÊı
+        // æ»‘åŠ¨çª—å£ä¸­å­—ç¬¦å‡ºç°çš„æ¬¡æ•°
         Map<Character, Integer> window = new HashMap<Character, Integer>();
         for(char ch:t.toCharArray()){
             needs.put(ch, needs.getOrDefault(ch, 0)+1);
@@ -27,22 +27,22 @@ public class SlidingWindow {
         int left = 0, right = 0, count = 0;
         while(right < s.length()){
             char ch = s.charAt(right);
-            // Èç¹ûĞèÒª´Ë×Ö·û
+            // å¦‚æœéœ€è¦æ­¤å­—ç¬¦
             if(needs.containsKey(ch)){
                 window.put(ch, window.getOrDefault(ch, 0)+1);
-                // Èç¹ûĞèÇóµÄÁ¿±»Âú×ãÁË£¬count++
+                // å¦‚æœéœ€æ±‚çš„é‡è¢«æ»¡è¶³äº†ï¼Œcount++
                 if(window.get(ch).compareTo(needs.get(ch)) == 0){
                     count++;
                 }
             }
-            // ËõĞ¡×óÇøÓò·¶Î§
+            // ç¼©å°å·¦åŒºåŸŸèŒƒå›´
             while(count == needs.size()){
                 char c = s.charAt(left);
                 if(window.containsKey(c)){
                     window.put(c, window.get(c)-1);
                     if(window.get(c).compareTo(needs.get(c)) < 0){
-                        // ´ËÊ±³ıÈ¥ÁËÕâ¸ö left´¦µÄ×Ö·û£¬¸ÕºÃ²»Âú×ãÌõ¼ş£¬
-                        // ËµÃ÷´Ë´¦ leftºÍrightÊÇ×îĞ¡µÄ·¶Î§
+                        // æ­¤æ—¶é™¤å»äº†è¿™ä¸ª leftå¤„çš„å­—ç¬¦ï¼Œåˆšå¥½ä¸æ»¡è¶³æ¡ä»¶ï¼Œ
+                        // è¯´æ˜æ­¤å¤„ leftå’Œrightæ˜¯æœ€å°çš„èŒƒå›´
                         if(right - left < minRange[0]){
                             minRange[1] = left;
                             minRange[2] = right;

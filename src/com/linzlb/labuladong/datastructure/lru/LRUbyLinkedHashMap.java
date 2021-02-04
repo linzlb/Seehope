@@ -1,4 +1,4 @@
-package com.linzlb.labuladong.datastructure;
+package com.linzlb.labuladong.datastructure.lru;
 
 import java.util.LinkedHashMap;
 
