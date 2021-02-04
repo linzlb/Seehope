@@ -1,4 +1,4 @@
-package com.linzlb.labuladong;
+package com.linzlb.labuladong.coreroutine;
 
 import java.util.LinkedList;
 import java.util.List;

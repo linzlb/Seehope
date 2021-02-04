@@ -1,4 +1,4 @@
-package com.linzlb.labuladong;
+package com.linzlb.labuladong.coreroutine;
 
 import java.util.HashMap;
 import java.util.Map;
