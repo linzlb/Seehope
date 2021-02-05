@@ -16,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/LeftRightPointer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/NQueens.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/coreroutine/SlidingWindow.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/datastructure/lru/LRUCache.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/datastructure/lru/LRUbyLinkedHashMap.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/linzlb/labuladong/dynamicplanning/FindLongest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/seehope/training/day1/Chuanzhichuanzhi.java" charset="UTF-8" />
