@@ -1,7 +1,5 @@
 package com.linzlb.labuladong.coreroutine;
 
-import java.util.function.LongFunction;
-
 /**
  * @Author: linzhengli
  * @Tel: 13570921913
@@ -70,5 +68,17 @@ public class LeftRightPointer {
             left++;
             right--;
         }
+    }
+
+    //判断是否回文串
+    boolean isPalindrome(String[] s){
+        int left = 0, right = s.length-1;
+        while (left<right){
+            if (s[left] != s[right]){
+                return false;
+            }
+            left++;right++;
+        }
+        return true;
     }
 }
