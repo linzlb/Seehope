@@ -190,19 +190,19 @@ public class Test {
 	
 	public static void main(String[] args) {
 
-		//Test.meetRegexp();
-		//Test.mark();
-		//Test.scope();
-		//Test.mark2();
-		//Test.POSIX();
-		//Test.boundary();
-		//Test.matchEmail();
-		//Test.findLookingAt();//**********************这个忘记了
-		//Test.replacement();
-		//Test.group();
-		//Test.qulifiers();
-		//Test.nonCapturingGroups();
-		//Test.backRefenrences();
+		//TraverseMap.meetRegexp();
+		//TraverseMap.mark();
+		//TraverseMap.scope();
+		//TraverseMap.mark2();
+		//TraverseMap.POSIX();
+		//TraverseMap.boundary();
+		//TraverseMap.matchEmail();
+		//TraverseMap.findLookingAt();//**********************这个忘记了
+		//TraverseMap.replacement();
+		//TraverseMap.group();
+		//TraverseMap.qulifiers();
+		//TraverseMap.nonCapturingGroups();
+		//TraverseMap.backRefenrences();
 		Test.flags();
 	}
 

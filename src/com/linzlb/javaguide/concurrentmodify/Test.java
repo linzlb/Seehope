@@ -30,7 +30,7 @@ public class Test {
 	}
 
 	/**
-	 * Õý³£Ö´ÐÐ
+	 * ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
 	 */
 	public static void demo2() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
@@ -39,7 +39,7 @@ public class Test {
 		while(iterator.hasNext()){
 			Integer integer = iterator.next();
 			if(integer==2)
-				iterator.remove();   //×¢ÒâÕâ¸öµØ·½
+				iterator.remove();   //×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø·ï¿½
 		}
 	}
 
@@ -49,7 +49,7 @@ public class Test {
 	 Exception in thread "Thread-0" java.util.ConcurrentModificationException
 	 at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
 	 at java.util.ArrayList$Itr.next(ArrayList.java:851)
-	 at Test$1.run(Test.java:50)
+	 at TraverseMap$1.run(TraverseMap.java:50)
 	 */
 	public static void demo3() {
 		list.add(1);
