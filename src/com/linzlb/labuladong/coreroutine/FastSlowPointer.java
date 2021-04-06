@@ -6,18 +6,18 @@ import com.linzlb.javaguide.algorithm.leetcode.ListNode;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/2/3 14:16
- * @Function:¿ìÂıÖ¸Õë  ½â¾öÁ´±íÎÊÌâ
+ * @Function:å¿«æ…¢æŒ‡é’ˆ  è§£å†³é“¾è¡¨é—®é¢˜
  */
 public class FastSlowPointer {
 
-    //¿ìÂıÖ¸ÕëµÄÓ¦ÓÃ1£ºÅĞ¶ÏÁ´±íÊÇ·ñÓĞ»·
+    //å¿«æ…¢æŒ‡é’ˆçš„åº”ç”¨1ï¼šåˆ¤æ–­é“¾è¡¨æ˜¯å¦æœ‰ç¯
     public static boolean hasCycle(ListNode head){
         ListNode fast, slow;
         fast = slow = head;
         while (fast!=null && slow!=null){
             fast = fast.next.next;
             slow = slow.next;
-            //Èç¹ûÓĞ»·£¬¿ìÂıÖ¸Õë¾Í»áÏàÓö
+            //å¦‚æœæœ‰ç¯ï¼Œå¿«æ…¢æŒ‡é’ˆå°±ä¼šç›¸é‡
             if (fast==slow){
                 return true;
             }
@@ -25,14 +25,14 @@ public class FastSlowPointer {
         return false;
     }
 
-    //¿ìÂıÖ¸ÕëµÄÓ¦ÓÃ2£ºÇóÓĞ»·Á´±íµÄ»·ÆğÊ¼Î»ÖÃ
+    //å¿«æ…¢æŒ‡é’ˆçš„åº”ç”¨2ï¼šæ±‚æœ‰ç¯é“¾è¡¨çš„ç¯èµ·å§‹ä½ç½®
     public static ListNode cycleAddr(ListNode head){
         ListNode fast, slow;
         fast = slow = head;
         while (fast!=null && slow!=null){
             fast = fast.next.next;
             slow = slow.next;
-            //Èç¹ûÓĞ»·£¬¿ìÂıÖ¸Õë¾Í»áÏàÓö
+            //å¦‚æœæœ‰ç¯ï¼Œå¿«æ…¢æŒ‡é’ˆå°±ä¼šç›¸é‡
             if (fast==slow){
                 break;
             }
@@ -42,11 +42,11 @@ public class FastSlowPointer {
             fast = fast.next;
             slow = slow.next;
         }
-        //2¸öÖ¸ÕëÏàÓö¾ÍÊÇ»·µÄÆğµã
+        //2ä¸ªæŒ‡é’ˆç›¸é‡å°±æ˜¯ç¯çš„èµ·ç‚¹
         return slow;
     }
 
-    //¿ìÂıÖ¸ÕëµÄÓ¦ÓÃ3£ºÇóÎŞ»·Á´±íµÄÖĞ¼äÎ»ÖÃ
+    //å¿«æ…¢æŒ‡é’ˆçš„åº”ç”¨3ï¼šæ±‚æ— ç¯é“¾è¡¨çš„ä¸­é—´ä½ç½®
     public static ListNode middle(ListNode head){
         ListNode fast, slow;
         fast = slow = head;

@@ -7,16 +7,16 @@ import java.util.Map;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/2/2 14:01
- * @Function:´ÕÁãÇ®ÎÊÌâ ¶¯Ì¬¹æ»®ÎÊÌâ¡« ÏÈÕÒ³ö×´Ì¬×ªÒÆ·½³Ì
- * ¸øÄãkÖÖÃæÖµµÄÓ²±Ò£¬ÃæÖµÎªc1,c2,...,ck,Ã¿ÖÖÓ²±ÒÊıÁ¿ÎŞÏŞ
- * ÔÙ¸øÒ»¸ö×Ü½ğ¶îamount£¬ÎÊÄã×îÉÙĞèÒª¼¸Ã¶Ó²±Ò´Õ³öÕâ¸ö½ğ¶î
+ * @Function:å‡‘é›¶é’±é—®é¢˜ åŠ¨æ€è§„åˆ’é—®é¢˜ï½ å…ˆæ‰¾å‡ºçŠ¶æ€è½¬ç§»æ–¹ç¨‹
+ * ç»™ä½ kç§é¢å€¼çš„ç¡¬å¸ï¼Œé¢å€¼ä¸ºc1,c2,...,ck,æ¯ç§ç¡¬å¸æ•°é‡æ— é™
+ * å†ç»™ä¸€ä¸ªæ€»é‡‘é¢amountï¼Œé—®ä½ æœ€å°‘éœ€è¦å‡ æšç¡¬å¸å‡‘å‡ºè¿™ä¸ªé‡‘é¢
  */
 public class CollectCoin {
 
-    public static int[] coins = new int[]{1,2,5,10};//Ó²±ÒÃæ¶î
+    public static int[] coins = new int[]{1,2,5,10};//ç¡¬å¸é¢é¢
 
-    //±©Á¦ÆÆ½â£¬Ê±¼ä¸´ÔÓ¶ÈO(n^k)
-    //coinsÎªÓ²±ÒÃæÖµ£¬amountÎªÄ¿±ê½ğ¶î ,µİ¹éĞ´·¨
+    //æš´åŠ›ç ´è§£ï¼Œæ—¶é—´å¤æ‚åº¦O(n^k)
+    //coinsä¸ºç¡¬å¸é¢å€¼ï¼Œamountä¸ºç›®æ ‡é‡‘é¢ ,é€’å½’å†™æ³•
     public static int coinChange(int amount){
         if (amount == 0){
             return 0;
@@ -24,7 +24,7 @@ public class CollectCoin {
         if (amount < 0){
             return -1;
         }
-        int res = Integer.MAX_VALUE;//ÕÒ×îĞ¡Öµ£¬ÏÈ³õÊ¼»¯¸ö×î´óµÄ
+        int res = Integer.MAX_VALUE;//æ‰¾æœ€å°å€¼ï¼Œå…ˆåˆå§‹åŒ–ä¸ªæœ€å¤§çš„
         for (int coin: coins){
             int subProblem = coinChange(amount-coin);
             if (subProblem == -1){
@@ -36,11 +36,11 @@ public class CollectCoin {
     }
 
 
-    //±¸ÍüÂ¼
+    //å¤‡å¿˜å½•
     public static Map<Integer,Integer> map = new HashMap();
-    //¸ÄÎª´ø"±¸ÍüÂ¼"µÄµİ¹é£¬Ê±¼ä¸´ÔÓ¶ÈO(nk)
+    //æ”¹ä¸ºå¸¦"å¤‡å¿˜å½•"çš„é€’å½’ï¼Œæ—¶é—´å¤æ‚åº¦O(nk)
     public static int coinChange2(int amount){
-        //ÏÈ²é±¸ÍüÂ¼
+        //å…ˆæŸ¥å¤‡å¿˜å½•
         if (map.containsKey(amount)){
             return map.get(amount);
         }
@@ -51,7 +51,7 @@ public class CollectCoin {
         if (amount < 0){
             return -1;
         }
-        int res = Integer.MAX_VALUE;//ÕÒ×îĞ¡Öµ£¬ÏÈ³õÊ¼»¯¸ö×î´óµÄ
+        int res = Integer.MAX_VALUE;//æ‰¾æœ€å°å€¼ï¼Œå…ˆåˆå§‹åŒ–ä¸ªæœ€å¤§çš„
         for (int coin: coins){
             int subProblem = coinChange2(amount-coin);
             if (subProblem == -1){
@@ -59,13 +59,13 @@ public class CollectCoin {
             }
             res = Math.min(res, subProblem+1);
         }
-        //¼ÇÈë±¸ÍüÂ¼
+        //è®°å…¥å¤‡å¿˜å½•
         map.put(amount, res == Integer.MAX_VALUE ? -1 : res);
         return res == Integer.MAX_VALUE ? -1 : res;
     }
 
     public static void main(String[] args) {
-//        System.out.println(coinChange(123));//°ëÌì³ö²»À´½á¹û£¬ÒòÎªÔËËã´ÎÊıÌ«´ó
+//        System.out.println(coinChange(123));//åŠå¤©å‡ºä¸æ¥ç»“æœï¼Œå› ä¸ºè¿ç®—æ¬¡æ•°å¤ªå¤§
         System.out.println(coinChange2(123));
     }
 }

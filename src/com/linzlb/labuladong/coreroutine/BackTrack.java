@@ -7,8 +7,8 @@ import java.util.List;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/2/2 14:52
- * @Function:È«ÅÅÁĞÎÊÌâ = n£¡ »ØËİËã·¨£¬ÍêÈ«ÊÇ±©Á¦Çî¾Ù
- * Êµ¼ÊÉÏ¾ÍÊÇ¾ö²ßÊ÷µÄ±éÀúÎÊÌâ
+ * @Function:å…¨æ’åˆ—é—®é¢˜ = nï¼ å›æº¯ç®—æ³•ï¼Œå®Œå…¨æ˜¯æš´åŠ›ç©·ä¸¾
+ * å®é™…ä¸Šå°±æ˜¯å†³ç­–æ ‘çš„éå†é—®é¢˜
  */
 public class BackTrack {
 
@@ -24,33 +24,33 @@ public class BackTrack {
         }
     }
 
-    //Ö÷º¯Êı£¬ÊäÈëÒ»×é²»ÖØ¸´µÄÊı×Ö£¬·µ»ØËûÃÇµÄÈ«ÅÅÁĞ
+    //ä¸»å‡½æ•°ï¼Œè¾“å…¥ä¸€ç»„ä¸é‡å¤çš„æ•°å­—ï¼Œè¿”å›ä»–ä»¬çš„å…¨æ’åˆ—
     public static List<List<Integer>> permute(int[] nums){
-        //¼ÇÂ¼Â·¾¶
+        //è®°å½•è·¯å¾„
         LinkedList<Integer> track = new LinkedList<>();
         backtrack(nums, track);
         return res;
     }
 
-    //Â·¾¶£º¼ÇÂ¼Ö÷trackÖĞ
-    //Ñ¡ÔñÁĞ±í£ºnumsÖĞ²»´æÔÚtrackÖĞµÄÔªËØ
-    //½áÊøÌõ¼ş£ºnumsÔªËØ¶¼ÔÚtrackÖĞ³öÏÖ
+    //è·¯å¾„ï¼šè®°å½•ä¸»trackä¸­
+    //é€‰æ‹©åˆ—è¡¨ï¼šnumsä¸­ä¸å­˜åœ¨trackä¸­çš„å…ƒç´ 
+    //ç»“æŸæ¡ä»¶ï¼šnumså…ƒç´ éƒ½åœ¨trackä¸­å‡ºç°
     public static void backtrack(int[] nums, LinkedList<Integer> track){
-        //´¥·¢Ìõ¼ş½áÊø
+        //è§¦å‘æ¡ä»¶ç»“æŸ
         if (track.size() == nums.length){
             res.add(new LinkedList(track));
             return;
         }
         for (int i=0; i<nums.length; i++){
-            //ÅÅ³ı²»ºÏ·¨Ñ¡Ôñ
+            //æ’é™¤ä¸åˆæ³•é€‰æ‹©
             if (track.contains(nums[i])){
                 continue;
             }
-            //×öÑ¡Ôñ
+            //åšé€‰æ‹©
             track.add(nums[i]);
-            //½øÈëÏÂÒ»²ã¾ö²ßÊ÷
+            //è¿›å…¥ä¸‹ä¸€å±‚å†³ç­–æ ‘
             backtrack(nums, track);
-            //È¡ÏûÑ¡Ôñ
+            //å–æ¶ˆé€‰æ‹©
             track.removeLast();
         }
     }
