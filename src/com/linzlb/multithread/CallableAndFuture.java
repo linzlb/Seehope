@@ -1,4 +1,4 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * 10.CallableÓëFutureµÄÓ¦ÓÃ
+ * 10.Callableï¿½ï¿½Futureï¿½ï¿½Ó¦ï¿½ï¿½
  */
 public class CallableAndFuture {
 
@@ -19,10 +19,10 @@ public class CallableAndFuture {
 		callableAndFuture2();
 	}
 	
-	//Ò»¸öÈÎÎñ
+	//Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private static void callableAndFuture(){
 		ExecutorService threadPool = Executors.newSingleThreadExecutor();
-		//callableÈÎÎñ¿ÉÄÜºÜ³¤
+		//callableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÜºÜ³ï¿½
 		Callable<String> callable = new Callable<String>() {
 			
 			@Override
@@ -31,11 +31,11 @@ public class CallableAndFuture {
 				return "hello,linzlb";
 			}
 		};
-		//callableÈÎÎñÍê³ÉÁË£¬futureÈ¥È¡½á¹û
+		//callableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½futureÈ¥È¡ï¿½ï¿½ï¿½
 		Future<String> future = threadPool.submit(callable);
-		System.out.println("µÈ´ı½á¹û");
+		System.out.println("ï¿½È´ï¿½ï¿½ï¿½ï¿½");
 		try {
-			System.out.println("ÄÃµ½½á¹û£º"+future.get());
+			System.out.println("ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+future.get());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
@@ -43,24 +43,24 @@ public class CallableAndFuture {
 		}
 	}
 	
-	//Ò»×éÈÎÎñ
+	//Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private static void callableAndFuture2(){
 		ExecutorService threadPool2 =  Executors.newFixedThreadPool(10);
 		CompletionService<Integer> completionService = 
 				new ExecutorCompletionService<Integer>(threadPool2);
-		//Ìá½»Ò»×éÈÎÎñ
+		//ï¿½á½»Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for(int i=1;i<=10;i++){
 			final int seq = i;
 			completionService.submit(new Callable<Integer>() {
 				@Override
 				public Integer call() throws Exception {
-					Thread.sleep(new Random().nextInt(5000));//²»³¬¹ı5Ãë
+					Thread.sleep(new Random().nextInt(5000));//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½
 					return seq;
 				}
 			});
 		}
 		
-		//×îÏÈÖ´ĞĞÍêµÄ¾ÍÏÈ´òÓ¡³öÀ´£¬ÀàËÆÊÕÂó×Ó£¬ÄÄÆ¬ÏÈÊìÏÈ¸îÄÄ¸ö
+		//ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½È´ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½Ä¸ï¿½
 		for(int i=0;i<10;i++){
 			try {
 				System.out.println(

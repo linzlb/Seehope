@@ -1,10 +1,10 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-//java5ÖÐ²¢·¢¿âµÄÏß³Ì³Ø¼°¶¨Ê±Æ÷
+//java5ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì³Ø¼ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 public class ThreadPoolTest {
 
 	public static void main(String[] args) {
@@ -14,9 +14,9 @@ public class ThreadPoolTest {
 	}
 
 	private void threadPool(){
-		//ExecutorService threadPool = Executors.newFixedThreadPool(3);//¹Ì¶¨Ïß³Ì³Ø£¬Í¬Ê±Ö»ÓÐ3¸öÏß³Ì£¬10¸öÈÎÎñµÄ»°¾ÍÖ»ÄÜÍ¬Ê±²Ù×÷3¸öÈÎÎñ
-		//ExecutorService threadPool = Executors.newCachedThreadPool();//³Ø×ÓÏß³ÌÊýÊÇ¶¯Ì¬µÄ
-		ExecutorService threadPool = Executors.newSingleThreadExecutor();//ÈçºÎÊµÏÖÏß³ÌËÀºóÖØÐÂÆô¶¯£¡£¡¾ÍÓÃÕâ¸ö
+		//ExecutorService threadPool = Executors.newFixedThreadPool(3);//ï¿½Ì¶ï¿½ï¿½ß³Ì³Ø£ï¿½Í¬Ê±Ö»ï¿½ï¿½3ï¿½ï¿½ï¿½ß³Ì£ï¿½10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ExecutorService threadPool = Executors.newCachedThreadPool();//ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½Ì¬ï¿½ï¿½
+		ExecutorService threadPool = Executors.newSingleThreadExecutor();//ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for(int i=1;i<=10;i++){
 			final int task = i;
 			threadPool.execute(new Runnable(){
@@ -41,6 +41,6 @@ public class ThreadPoolTest {
 			public void run() {
 				System.out.println("bombing!");
 			}
-		}, 6, 2, TimeUnit.SECONDS);	//¶¨Ê±Æ÷£¬6Ãë¿ªÊ¼£¬Ã¿¸öÁ½Ãë²Ù×÷Ò»´Î
+		}, 6, 2, TimeUnit.SECONDS);	//ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½6ï¿½ë¿ªÊ¼ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 	}
 }

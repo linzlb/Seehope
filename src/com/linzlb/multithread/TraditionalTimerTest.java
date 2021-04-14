@@ -1,11 +1,11 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * 2.´«Í³¶¨Ê±Æ÷¼¼Êõ
+ * 2.ï¿½ï¿½Í³ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class TraditionalTimerTest {
 
@@ -18,7 +18,7 @@ public class TraditionalTimerTest {
 				
 			}
 		};
-		new Timer().schedule(task, 5000, 2000);//5000ºÁÃëºó¿ªÊ¼£¬Ã¿¸ô2000ºÁÃëÒ»´Î
+		new Timer().schedule(task, 5000, 2000);//5000ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ã¿ï¿½ï¿½2000ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 	}
 
 	private static void showTime(){
@@ -47,7 +47,7 @@ public class TraditionalTimerTest {
 	}
 }
 
-//¸ôÁ½Ãë£¬¸ô4Ãë£¬ÂÖ×ÅÀ´
+//ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½4ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 class MyTimerTask extends TimerTask{
 	private static int count = 0;
 	

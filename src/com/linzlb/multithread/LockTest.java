@@ -1,11 +1,11 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
- * 11.java5µÄÏß³ÌËø¼¼Êõ
+ * 11.java5ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * lock/unlock
  */
 public class LockTest {

@@ -1,11 +1,11 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 13.java5Ìõ¼ş×èÈûConditionµÄÓ¦ÓÃ
+ * 13.java5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Conditionï¿½ï¿½Ó¦ï¿½ï¿½
  */
 public class ThreeConditionCommunication {
 

@@ -1,11 +1,11 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 /**
- * 5.Ïß³Ì·¶Î§ÄÚ¹²Ïí±äÁ¿
+ * 5.ï¿½ß³Ì·ï¿½Î§ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class ThreadScopeShareData {
 

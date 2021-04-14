@@ -1,7 +1,7 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 /**
- * 3.传统线程互斥技术 synchronized
+ * 3.锟斤拷统锟竭程伙拷锟解技锟斤拷 synchronized
  */
 public class TraditionalThreadSynchronized {
 
@@ -39,7 +39,7 @@ public class TraditionalThreadSynchronized {
 	}
 
 	private void init(){
-		final Output output = new Output();//线程用同一个对象并加锁才能保证同步
+		final Output output = new Output();//锟竭筹拷锟斤拷同一锟斤拷锟斤拷锟襟并硷拷锟斤拷锟斤拷锟杰憋拷证同锟斤拷
 		new Thread(new Runnable() {
 
 			@Override

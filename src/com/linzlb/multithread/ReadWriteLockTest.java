@@ -1,11 +1,11 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.Random;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /*
-12.¶ÁÐ´Ëø?
+12.ï¿½ï¿½Ð´ï¿½ï¿½?
  */
 public class ReadWriteLockTest {
     public static void main(String[] args) {
@@ -35,10 +35,10 @@ public class ReadWriteLockTest {
 	}
 }
 class Queue{
-	private Object data = null;//¹²ÏíÊý¾Ý£¬Ö»ÄÜÓÐÒ»¸öÏß³ÌÄÜÐ´¸ÃÊý¾Ý£¬µ«¿ÉÒÔÓÐ¶à¸öÏß³ÌÍ¬Ê±¶Á¸ÃÊý¾Ý¡£
-	ReadWriteLock rwl = new ReentrantReadWriteLock();//Ê¹ÓÃReadWriteLock
+	private Object data = null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ß³ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
+	ReadWriteLock rwl = new ReentrantReadWriteLock();//Ê¹ï¿½ï¿½ReadWriteLock
 	public void get(){
-		rwl.readLock().lock();//¶ÁËøËø×¡
+		rwl.readLock().lock();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¡
 		try {
 			System.out.println(Thread.currentThread().getName() + " be ready to read data!");
 			Thread.sleep((long)(Math.random()*1000));
@@ -46,12 +46,12 @@ class Queue{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}finally{
-			rwl.readLock().unlock();//¶ÁËøÊÍ·Å
+			rwl.readLock().unlock();//ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½
 		}
 	}
 	
 	public void put(Object data){
-		rwl.writeLock().lock();//Ð´ËøËø×¡
+		rwl.writeLock().lock();//Ð´ï¿½ï¿½ï¿½ï¿½×¡
 		try {
 			System.out.println(Thread.currentThread().getName() + " be ready to write data!");					
 			Thread.sleep((long)(Math.random()*1000));
@@ -60,7 +60,7 @@ class Queue{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}finally{
-			rwl.writeLock().unlock();//Ð´ËøÊÍ·Å
+			rwl.writeLock().unlock();//Ð´ï¿½ï¿½ï¿½Í·ï¿½
 		}
 	}
 }

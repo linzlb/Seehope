@@ -1,12 +1,12 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.concurrent.Exchanger;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 17.java5µÄExchangerÍ¬²½¹¤¾ß
- * ¿ÉÒÔÊµÏÖÏß³ÌµÄÊý¾Ý½»»¥
+ * 17.java5ï¿½ï¿½ExchangerÍ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ß³Ìµï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½
  */
 public class ExchangerTest {
     public static void main(String[] args) {
@@ -16,12 +16,12 @@ public class ExchangerTest {
 			public void run() {
 				try {				
 					String data1 = "zxx";
-					System.out.println("Ïß³Ì" + Thread.currentThread().getName() + 
-					"ÕýÔÚ°ÑÊý¾Ý" + data1 +"»»³öÈ¥");
+					System.out.println("ï¿½ß³ï¿½" + Thread.currentThread().getName() + 
+					"ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½" + data1 +"ï¿½ï¿½ï¿½ï¿½È¥");
 					Thread.sleep((long)(Math.random()*10000));
 					String data2 = (String)exchanger.exchange(data1);
-					System.out.println("Ïß³Ì" + Thread.currentThread().getName() + 
-					"»»»ØµÄÊý¾ÝÎª" + data2);
+					System.out.println("ï¿½ß³ï¿½" + Thread.currentThread().getName() + 
+					"ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½Îª" + data2);
 				}catch(Exception e){
 					e.getStackTrace();
 				}
@@ -31,12 +31,12 @@ public class ExchangerTest {
 			public void run() {
 				try {				
 					String data1 = "lhm";
-					System.out.println("Ïß³Ì" + Thread.currentThread().getName() + 
-					"ÕýÔÚ°ÑÊý¾Ý" + data1 +"»»³öÈ¥");
+					System.out.println("ï¿½ß³ï¿½" + Thread.currentThread().getName() + 
+					"ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½" + data1 +"ï¿½ï¿½ï¿½ï¿½È¥");
 					Thread.sleep((long)(Math.random()*10000));					
 					String data2 = (String)exchanger.exchange(data1);
-					System.out.println("Ïß³Ì" + Thread.currentThread().getName() + 
-					"»»»ØµÄÊý¾ÝÎª" + data2);
+					System.out.println("ï¿½ß³ï¿½" + Thread.currentThread().getName() + 
+					"ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½Îª" + data2);
 				}catch(Exception e){
 					e.getStackTrace();
 				}				

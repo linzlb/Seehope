@@ -1,4 +1,4 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * ÓÃ¶ÁÐ´ËøÊµÏÖ»º´æ
+ * ï¿½Ã¶ï¿½Ð´ï¿½ï¿½Êµï¿½Ö»ï¿½ï¿½ï¿½
  */
 public class CacheDemo {
     private Map<String, Object> cache = new HashMap<String, Object>();

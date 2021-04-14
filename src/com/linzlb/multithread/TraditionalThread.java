@@ -1,7 +1,7 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 /**
- * @function 1.´«Í³´´½¨Ïß³ÌµÄ·½·¨
+ * @function 1.ï¿½ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ß³ÌµÄ·ï¿½ï¿½ï¿½
  * @author linzlb
  * @date 20170402
  */
@@ -18,7 +18,7 @@ public class TraditionalThread {
 						e.printStackTrace();
 					}
 					System.out.println("1:" + Thread.currentThread().getName());
-					//System.out.println("2:" + this.getName());//this--run·½·¨Ëù¶ÔÓ¦µÄÏß³Ì¶ÔÏó
+					//System.out.println("2:" + this.getName());//this--runï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ß³Ì¶ï¿½ï¿½ï¿½
 				}
 			}
 		};
@@ -26,8 +26,8 @@ public class TraditionalThread {
 	}
 
 	private static void newThread2(){
-		//RunnableÊÇÏß³ÌËùÒªÔËĞĞµÄ´úÂëµÄËŞÖ÷
-		//½«ËùÒªÔËĞĞµÄ´úÂë·ÅRunnable¶ÔÏó¸üÌåÏÖÃæÏò¶ÔÏóµÄ±àÂë·½Ê½
+		//Runnableï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ĞµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ĞµÄ´ï¿½ï¿½ï¿½ï¿½Runnableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ë·½Ê½
 		Thread thread = new Thread(new Runnable() {
 
 			@Override
@@ -61,7 +61,7 @@ public class TraditionalThread {
 		}.start();
 	}
 
-	//new Thread(runnable.run1) {run2}.start();ÕâÖÖ½á¹¹£¬½á¹¹ÊÇrun2£¬Èç¹ûrun2²»¸²¸Ç£¬¾ÍÊÇrun1
+	//new Thread(runnable.run1) {run2}.start();ï¿½ï¿½ï¿½Ö½á¹¹ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½run2ï¿½ï¿½ï¿½ï¿½ï¿½run2ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½run1
 	private static void newThread4(){
 		new Thread(new Runnable() {
 			

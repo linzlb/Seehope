@@ -1,4 +1,4 @@
-package com.linzlb.javaguide.multithread;
+package com.linzlb.multithread;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
