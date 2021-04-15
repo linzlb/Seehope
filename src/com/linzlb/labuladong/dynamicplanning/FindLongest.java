@@ -16,6 +16,8 @@ import java.util.Arrays;
  * 解题思路：
  * 先对宽度W进行升序排列，如果遇到W相同的，按高度h降序排列（因为宽度一样不能嵌套）
  * 再对高度h作为一个数组，求这个数组对最长子序列长度，就得到答案～
+ *
+ * LeetCode 354 https://leetcode-cn.com/problems/russian-doll-envelopes/
  */
 public class FindLongest {
 
