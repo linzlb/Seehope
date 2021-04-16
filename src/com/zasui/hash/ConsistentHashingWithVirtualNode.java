@@ -6,15 +6,17 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 /**
  * 带虚拟节点的一致性Hash算法
- * 
- * @author 五月的仓颉 http://www.cnblogs.com/xrq730/
  */
 public class ConsistentHashingWithVirtualNode {
     /**
     * 待添加入Hash环的服务器列表
     */
-    private static String[] servers = { "192.168.0.0:111", "192.168.0.1:111", "192.168.0.2:111", "192.168.0.3:111",
-      "192.168.0.4:111" };
+    private static String[] servers = {
+            "192.168.0.0:111",
+            "192.168.0.1:111",
+            "192.168.0.2:111",
+            "192.168.0.3:111",
+            "192.168.0.4:111" };
 
     /**
     * 真实结点列表,考虑到服务器上线、下线的场景，即添加、删除的场景会比较频繁，这里使用LinkedList会更好
