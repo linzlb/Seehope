@@ -8,7 +8,7 @@ import java.util.Map;
  * @Tel: 13570921913
  * @Date: 2021/2/4 09:27
  * @Function:滑动窗口算法
- *  求最小覆盖字串
+ *  求最小覆盖字串 hard
  */
 public class SlidingWindow {
 
