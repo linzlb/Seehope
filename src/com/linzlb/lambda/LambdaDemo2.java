@@ -106,7 +106,7 @@ public class LambdaDemo2 {
 
     public static void main(String[] args) {
         LambdaDemo2 ld = new LambdaDemo2();
-//        ld.streamTest();
-        ld.parallelStreamTest();
+        ld.streamTest();
+//        ld.parallelStreamTest();
     }
 }
