@@ -1,4 +1,4 @@
-package com.linzlb.utils;
+package com.zasui.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.linzlb.utils;
+package com.zasui.utils;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

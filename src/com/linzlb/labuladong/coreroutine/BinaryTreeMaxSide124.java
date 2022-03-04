@@ -1,5 +1,7 @@
 package com.linzlb.labuladong.coreroutine;
 
+import com.linzlb.labuladong.entry.TreeNode;
+
 /**
  * @Author: linzhengli
  * @Tel: 13570921913
@@ -11,7 +13,7 @@ package com.linzlb.labuladong.coreroutine;
 给你一个二叉树的根节点 root ，返回其 最大路径和 。
 链接：https://leetcode-cn.com/problems/binary-tree-maximum-path-sum
  */
-public class BinaryTreeMaxSide {
+public class BinaryTreeMaxSide124 {
 
     int maxSum = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
@@ -46,7 +48,7 @@ public class BinaryTreeMaxSide {
         return root.val + Math.max(leftGain, rightGain);
     }
 
-    /* 测试
+    /* 测试  15-20-7
       -10
       / \
      9 [20]
@@ -54,7 +56,7 @@ public class BinaryTreeMaxSide {
      [15] [7]
      */
     public static void main(String[] args) {
-        BinaryTreeMaxSide bts = new BinaryTreeMaxSide();
+        BinaryTreeMaxSide124 bts = new BinaryTreeMaxSide124();
 
         TreeNode l1 = new TreeNode(9);
         TreeNode r1l2 = new TreeNode(15);

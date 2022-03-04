@@ -1,6 +1,6 @@
 package com.linzlb.labuladong.datastructure.binarytree;
 
-import com.linzlb.labuladong.coreroutine.TreeNode;
+import com.linzlb.labuladong.entry.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
