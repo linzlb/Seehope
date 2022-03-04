@@ -103,8 +103,33 @@ public class LambdaDemo3 {
         });
     }
 
+    //分组，多级分组
+    public void streamTest4(){
+        List<Person> list = new ArrayList<>();
+        list.add(new Person("赵丽颖", 52, 95, "1.1"));
+        list.add(new Person("杨颖", 56, 86, "1.4"));
+        list.add(new Person("迪丽热巴", 56, 99, "1.4"));
+        list.add(new Person("黄晓明", 52, 77, "1.4"));
+        // 条件1
+        Comparator<Person> priotityComparator = Comparator.comparing(Person::getAge);
+        // 条件2
+        Comparator<Person> createTimeComparator = Comparator.comparing(Person::getScore);
+
+
+        Comparator<Person> com = (Person h1, Person h2) -> h1.getName().compareTo(h2.getName()) * (-1);
+
+
+
+        Comparator<Person> versionSort = (v2, v1) -> VersionUtil.compareVersion(v2.getSex(), v1.getSex());
+
+        // 开始排序
+        list = list.stream().sorted(versionSort.thenComparing(createTimeComparator).reversed()).collect(Collectors.toList());
+        list.stream().forEach(System.out::println);
+
+    }
+
     public static void main(String[] args) {
         LambdaDemo3 ld = new LambdaDemo3();
-        ld.streamTest3();
+        ld.streamTest4();
     }
 }

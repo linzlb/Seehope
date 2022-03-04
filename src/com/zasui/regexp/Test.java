@@ -203,9 +203,21 @@ public class Test {
 		//TraverseMap.qulifiers();
 		//TraverseMap.nonCapturingGroups();
 		//TraverseMap.backRefenrences();
-		Test.flags();
+		//Test.flags();
+		p("aasdfaf22323rsdfasf".matches(".*\\d+.*"));//true
 	}
 
+
+	// 判断一个字符串是否含有数字
+	public boolean HasDigit(String content) {
+		boolean flag = false;
+		Pattern p = Pattern.compile(".*\\d+.*");
+		Matcher m = p.matcher(content);
+		if (m.matches()) {
+			flag = true;
+		}
+		return flag;
+	}
 
 	/**
 	 * 输出方法
