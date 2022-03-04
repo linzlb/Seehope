@@ -4,16 +4,16 @@ package com.linzlb.javaguide.algorithm.leetcode;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/1/27 10:44
- * @Function: 将字符串的每个空格替换为 %20
+ * @Function: 灏嗗瓧绗︿覆鐨勬瘡涓┖鏍兼浛鎹负 %20
  */
 public class StringKMP {
 
-    //方法1：用API
+    //鏂规硶1锛氱敤API
     public static String replaceSpace(StringBuffer str) {
         return str.toString().replaceAll("\\s", "%20");
     }
 
-    //方法2：常规方法，用String.charAt(i)以及equels判断空格
+    //鏂规硶2锛氬父瑙勬柟娉曪紝鐢⊿tring.charAt(i)浠ュ強equels鍒ゆ柇绌烘牸
     public static String replaceSpace2(StringBuffer str) {
         int len = str.length();
         StringBuffer result = new StringBuffer();

@@ -1,10 +1,10 @@
 package com.linzlb.javaguide.algorithm.Josephu;
 
 /**
- * ¶ªÊÖÅÁÎÊÌâ£¬Ô¼Éª·òÎÊÌâ
- * 1 ½¨Á¢Ò»¸öÁ´±íÀà£¬²¢¸ù¾İÊäÈëµÄ¸öÊı½¨Á¢Á´±í
-   2 Á´±íÀàÀïÃæÁ½¸öÊôĞÔk(´ÓµÚ¼¸¸öĞ¡º¢¿ªÊ¼ÊıÊı)£¬m £¨Ã¿´ÎÊı¼¸¸öĞ¡º¢£©
-   3 Á´±íÀàµÄplay()·½·¨£¬ÓÃtemp×÷ÎªÖ¸Õë£¬½«µÚ¶ş¸önextChileChildÁ´³ÉµÚÒ»¸önextChileChild
+ * ä¸¢æ‰‹å¸•é—®é¢˜ï¼Œçº¦ç‘Ÿå¤«é—®é¢˜
+ * 1 å»ºç«‹ä¸€ä¸ªé“¾è¡¨ç±»ï¼Œå¹¶æ ¹æ®è¾“å…¥çš„ä¸ªæ•°å»ºç«‹é“¾è¡¨
+ 2 é“¾è¡¨ç±»é‡Œé¢ä¸¤ä¸ªå±æ€§k(ä»ç¬¬å‡ ä¸ªå°å­©å¼€å§‹æ•°æ•°)ï¼Œm ï¼ˆæ¯æ¬¡æ•°å‡ ä¸ªå°å­©ï¼‰
+ 3 é“¾è¡¨ç±»çš„play()æ–¹æ³•ï¼Œç”¨tempä½œä¸ºæŒ‡é’ˆï¼Œå°†ç¬¬äºŒä¸ªnextChileChildé“¾æˆç¬¬ä¸€ä¸ªnextChileChild
  */
 public class Demo {
 
@@ -12,7 +12,7 @@ public class Demo {
 		// TODO Auto-generated method stub
 		CycLink cycLink = new CycLink();
 		cycLink.setLen(5);
-		cycLink.createLink();//³õÊ¼»¯»·ĞÎÁ´±í
+		cycLink.createLink();//åˆå§‹åŒ–ç¯å½¢é“¾è¡¨
 		cycLink.setK(2);
 		cycLink.setM(2);
 		//cycLink.show();
@@ -22,107 +22,107 @@ public class Demo {
 }
 
 class Child{
-	int no;//±àºÅ
-	Child nextChild = null;//Ö¸ÏòÏÂ¸öĞ¡º¢
+	int no;//ç¼–å·
+	Child nextChild = null;//æŒ‡å‘ä¸‹ä¸ªå°å­©
 	public Child(int no){
-		//¸øĞ¡º¢¸ö±àºÅ
+		//ç»™å°å­©ä¸ªç¼–å·
 		this.no = no;
 	}
 }
 
-//»·ĞÎÁ´±í
+//ç¯å½¢é“¾è¡¨
 class CycLink{
-	//ÏÈ¶¨ÒåÒ»¸öÖ¸ÏòÁ´±í,µÚÒ»¸öĞ¡º¢µÄÒıÓÃ
-	//Ö¸ÏòµÚÒ»¸öĞ¡º¢µÄÒıÓÃ²»ÄÜ¶¯
+	//å…ˆå®šä¹‰ä¸€ä¸ªæŒ‡å‘é“¾è¡¨,ç¬¬ä¸€ä¸ªå°å­©çš„å¼•ç”¨
+	//æŒ‡å‘ç¬¬ä¸€ä¸ªå°å­©çš„å¼•ç”¨ä¸èƒ½åŠ¨
 	Child firstChild = null;
-	Child temp = null;//¶¨Òå¸öÓÎ±ê,Ò»Ö±Ö¸ÏòÏÂÒ»¸öĞ¡º¢
-	int len = 0;//±íÊ¾¹²ÓĞ¼¸¸öĞ¡º¢
-	int k = 0;//´ÓµÚ¼¸¸ö¿ªÊ¼ÊıÊı
-	int m = 0;//ÊımÏÂ
-	
-	//ÉèÖÃÁ´±í´óĞ¡
+	Child temp = null;//å®šä¹‰ä¸ªæ¸¸æ ‡,ä¸€ç›´æŒ‡å‘ä¸‹ä¸€ä¸ªå°å­©
+	int len = 0;//è¡¨ç¤ºå…±æœ‰å‡ ä¸ªå°å­©
+	int k = 0;//ä»ç¬¬å‡ ä¸ªå¼€å§‹æ•°æ•°
+	int m = 0;//æ•°mä¸‹
+
+	//è®¾ç½®é“¾è¡¨å¤§å°
 	public void setLen(int len){
 		this.len = len;
 	}
-	//ÉèÖÃ´ÓµÚ¼¸¸öÈË¿ªÊ¼ÊıÊı
+	//è®¾ç½®ä»ç¬¬å‡ ä¸ªäººå¼€å§‹æ•°æ•°
 	public void setK(int k){
 		this.k = k;
 	}
-	//ÉèÖÃÊımÏÂ
+	//è®¾ç½®æ•°mä¸‹
 	public void setM(int m){
 		this.m = m;
 	}
-	
-	//¿ªÊ¼play
+
+	//å¼€å§‹play
 	public void play(){
 		Child temp = this.firstChild;
-		
-		//1.ÏÈÕÒµ½¿ªÊ¼ÊıÊıµÄÈË,×Ô¼ºÒ²ÊıÒ»ÏÂ¡£ËùÒÔ-1
+
+		//1.å…ˆæ‰¾åˆ°å¼€å§‹æ•°æ•°çš„äºº,è‡ªå·±ä¹Ÿæ•°ä¸€ä¸‹ã€‚æ‰€ä»¥-1
 		for(int i=1; i<=k-1; i++){
 			temp = temp.nextChild;
 		}
-		
-		
-		  while(this.len!=1){
-			//2.Êım´Î,Ò²²»ÄÜ´øµÈºÅ
+
+
+		while(this.len!=1){
+			//2.æ•°mæ¬¡,ä¹Ÿä¸èƒ½å¸¦ç­‰å·
 			for(int j=1; j<m; j++){
 				temp = temp.nextChild;
 			}
-			
-			
-			Child temp2 = temp;//ÕÒµ½Òª³öÈ¦µÄÇ°Ò»¸öĞ¡º¢
-			System.out.println("Òª³öÈ¦µÄĞ¡º¢£º"+(temp2.no));
+
+
+			Child temp2 = temp;//æ‰¾åˆ°è¦å‡ºåœˆçš„å‰ä¸€ä¸ªå°å­©
+			System.out.println("è¦å‡ºåœˆçš„å°å­©ï¼š"+(temp2.no));
 			while(temp2.nextChild!=temp){
 				temp2 = temp2.nextChild;
 			}
-			//3.½²Êıµ½mµÄĞ¡º¢ÍË³öÈ¦,¾ÍÊÇÈÃnextChildÖ¸ÏòÏÂÏÂ¸ö
+			//3.è®²æ•°åˆ°mçš„å°å­©é€€å‡ºåœˆ,å°±æ˜¯è®©nextChildæŒ‡å‘ä¸‹ä¸‹ä¸ª
 			temp2.nextChild = temp.nextChild;
-			//ÈÃtempÖ¸ÏòÏÂÒ»¸öÊıÊıµÄĞ¡º¢
+			//è®©tempæŒ‡å‘ä¸‹ä¸€ä¸ªæ•°æ•°çš„å°å­©
 			temp = temp.nextChild;
-			
-			         
-		   
+
+
+
 			//this.show();
 			this.len--;
 		}
-		
-		
-		//×îºóÒ»¸öĞ¡º¢
-		System.out.println("×îºóÒ»¸öĞ¡º¢:"+temp.no);
+
+
+		//æœ€åä¸€ä¸ªå°å­©
+		System.out.println("æœ€åä¸€ä¸ªå°å­©:"+temp.no);
 	}
-	
-	
-	//³õÊ¼»¯»·ĞÎÁ´±í
+
+
+	//åˆå§‹åŒ–ç¯å½¢é“¾è¡¨
 	public void createLink(){
-		//°´Ğ¡º¢Ñ­»·
+		//æŒ‰å°å­©å¾ªç¯
 		for(int i=1;i<=len;i++){
 			if(i == 1){
-				//´´½¨µÚÒ»¸öĞ¡º¢
+				//åˆ›å»ºç¬¬ä¸€ä¸ªå°å­©
 				Child ch = new Child(i);
-				this.firstChild =ch;//Ö¸ÏòµÚÒ»¸öĞ¡º¢µÄÒıÓÃ
-				this.temp = ch;//¶¨ÒåÓÎ±ê
+				this.firstChild =ch;//æŒ‡å‘ç¬¬ä¸€ä¸ªå°å­©çš„å¼•ç”¨
+				this.temp = ch;//å®šä¹‰æ¸¸æ ‡
 			}else{
 				if(i == len){
-					//´´½¨×îºóÒ»¸öĞ¡º¢
+					//åˆ›å»ºæœ€åä¸€ä¸ªå°å­©
 					Child ch = new Child(i);
 					temp.nextChild = ch;
 					temp = ch;
 					temp.nextChild = this.firstChild;
 				}else{
-					//¼ÌĞø´´½¨Ğ¡º¢
+					//ç»§ç»­åˆ›å»ºå°å­©
 					Child ch = new Child(i);
 					temp.nextChild = ch;
 					temp=ch;
 				}
-				
+
 			}
-			
+
 		}
 	}
-	
-	//´òÓ¡¸Ã»·ĞÎÁ´±í
+
+	//æ‰“å°è¯¥ç¯å½¢é“¾è¡¨
 	public void show(){
-		//¶¨ÒåÒ»¸öÅÜÁúÌ×µÄ
+		//å®šä¹‰ä¸€ä¸ªè·‘é¾™å¥—çš„
 		Child temp = this.firstChild;
 		do{
 			System.err.print(temp.no+"---");

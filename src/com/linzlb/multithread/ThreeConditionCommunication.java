@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 13.java5��������Condition��Ӧ��
+ * 13.java5 Condition
  */
 public class ThreeConditionCommunication {
 

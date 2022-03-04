@@ -4,18 +4,18 @@ package com.linzlb.labuladong.datastructure.lru;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/2/4 13:51
- * @Function:ÓÃNode½Úµã×é³ÉË«ÏòÁ´±í {@link Node}
- * Ê¹ÓÃË«ÏòÁ´±íÊÇÒòÎªÉ¾³ıµÄÊ±ºòĞèÒªÊ¹ÓÃµ½Ç°Çı£¬ÓĞË«ÏòÁ´±íÊ±¼ä¸´ÔÓ¶È¾ÍºÜµÍ
+ * @Function:ç”¨NodeèŠ‚ç‚¹ç»„æˆåŒå‘é“¾è¡¨ {@link Node}
+ * ä½¿ç”¨åŒå‘é“¾è¡¨æ˜¯å› ä¸ºåˆ é™¤çš„æ—¶å€™éœ€è¦ä½¿ç”¨åˆ°å‰é©±ï¼Œæœ‰åŒå‘é“¾è¡¨æ—¶é—´å¤æ‚åº¦å°±å¾ˆä½
  */
 public class DoubleList {
 
-    //Í·Î²Ğé½Úµã
+    //å¤´å°¾è™šèŠ‚ç‚¹
     private Node head, tail;
-    //Á´±íÔªËØ×é
+    //é“¾è¡¨å…ƒç´ ç»„
     private int size;
 
     public DoubleList(){
-        //³õÊ¼»¯
+        //åˆå§‹åŒ–
         head = new Node(0, 0);
         tail = new Node(0, 0);
         head.next = tail;
@@ -23,7 +23,7 @@ public class DoubleList {
         size = 0;
     }
 
-    //ÔÚÁ´±íÎ²²¿Ìí¼Ó½Úµãx£¬Ê±¼ä¸´ÔÓ¶ÈO(1)
+    //åœ¨é“¾è¡¨å°¾éƒ¨æ·»åŠ èŠ‚ç‚¹xï¼Œæ—¶é—´å¤æ‚åº¦O(1)
     public void addLast(Node x){
         x.prev = tail.prev;
         x.next = tail;
@@ -32,24 +32,24 @@ public class DoubleList {
         size++;
     }
 
-    //É¾³ıÁ´±íÖĞµÄx½Úµã£¨xÒ»¶¨´æÔÚ£©Ê±¼ä¸´ÔÓ¶ÈO(1)
+    //åˆ é™¤é“¾è¡¨ä¸­çš„xèŠ‚ç‚¹ï¼ˆxä¸€å®šå­˜åœ¨ï¼‰æ—¶é—´å¤æ‚åº¦O(1)
     public void remove(Node x){
         x.prev.next = x.next;
         x.next.prev = x.prev;
         size--;
     }
 
-    //É¾³ıÁ´±íµÚÒ»¸ö½Úµã£¬²¢·µ»Ø¸Ã½Úµã£¬Ê±¼ä¸´ÔÓ¶ÈO(1)
+    //åˆ é™¤é“¾è¡¨ç¬¬ä¸€ä¸ªèŠ‚ç‚¹ï¼Œå¹¶è¿”å›è¯¥èŠ‚ç‚¹ï¼Œæ—¶é—´å¤æ‚åº¦O(1)
     public Node removeFirst(){
         if (head.next == tail){
-            return null;//Ö»ÓĞÍ·Î²Ğé½ÚµãµÄ¿ÕÁ´±í
+            return null;//åªæœ‰å¤´å°¾è™šèŠ‚ç‚¹çš„ç©ºé“¾è¡¨
         }
         Node first = head.next;
         remove(first);
         return first;
     }
 
-    //·µ»ØÁ´±í³¤¶È£¬Ê±¼ä¸´ÔÓ¶ÈO(1)
+    //è¿”å›é“¾è¡¨é•¿åº¦ï¼Œæ—¶é—´å¤æ‚åº¦O(1)
     public int size(){
         return size;
     }

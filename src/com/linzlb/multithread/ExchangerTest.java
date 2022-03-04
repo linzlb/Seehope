@@ -5,8 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 17.java5��Exchangerͬ������
- * ����ʵ���̵߳����ݽ���
+ * 17.java5 Exchanger
  */
 public class ExchangerTest {
     public static void main(String[] args) {
@@ -15,13 +14,13 @@ public class ExchangerTest {
 		service.execute(new Runnable(){
 			public void run() {
 				try {				
-					String data1 = "zxx";
-					System.out.println("�߳�" + Thread.currentThread().getName() + 
-					"���ڰ�����" + data1 +"����ȥ");
+					String data1 = "T1data111111111111";
+					System.out.println("Thread" + Thread.currentThread().getName() +
+					"data1" + data1 +"～");
 					Thread.sleep((long)(Math.random()*10000));
 					String data2 = (String)exchanger.exchange(data1);
-					System.out.println("�߳�" + Thread.currentThread().getName() + 
-					"���ص�����Ϊ" + data2);
+					System.out.println("Thread" + Thread.currentThread().getName() +
+					"data2" + data2);
 				}catch(Exception e){
 					e.getStackTrace();
 				}
@@ -30,13 +29,13 @@ public class ExchangerTest {
 		service.execute(new Runnable(){
 			public void run() {
 				try {				
-					String data1 = "lhm";
-					System.out.println("�߳�" + Thread.currentThread().getName() + 
-					"���ڰ�����" + data1 +"����ȥ");
+					String data1 = "T2data2222222222222";
+					System.out.println("Thread" + Thread.currentThread().getName() +
+							"data1" + data1 +"～");
 					Thread.sleep((long)(Math.random()*10000));					
 					String data2 = (String)exchanger.exchange(data1);
-					System.out.println("�߳�" + Thread.currentThread().getName() + 
-					"���ص�����Ϊ" + data2);
+					System.out.println("Thread" + Thread.currentThread().getName() +
+							"data2" + data2);
 				}catch(Exception e){
 					e.getStackTrace();
 				}				

@@ -1,13 +1,13 @@
 package com.linzlb.javaguide.algorithm.digui;
-//µÚ1¸öÈË10£¬µÚ2¸ö±ÈµÚ1¸öÈË´ó2Ëê£¬ÒÀ´ÎµİÍÆ£¬ÇëÓÃµİ¹é·½Ê½¼ÆËã³öµÚ8¸öÈË¶à´ó£¿
+//ç¬¬1ä¸ªäºº10ï¼Œç¬¬2ä¸ªæ¯”ç¬¬1ä¸ªäººå¤§2å²ï¼Œä¾æ¬¡é€’æ¨ï¼Œè¯·ç”¨é€’å½’æ–¹å¼è®¡ç®—å‡ºç¬¬8ä¸ªäººå¤šå¤§ï¼Ÿ
 public class Test {
 	public static void main(String [] args)
 	{
 		for (int i = 1; i < 8+1; i++) {
-			System.out.println("µÚ"+i+"¸öÈË"+computeAge(i)+"Ëê");
+			System.out.println("ç¬¬"+i+"ä¸ªäºº"+computeAge(i)+"å²");
 		}
 	}
-	
+
 	public static int computeAge(int n)
 	{
 		if(n==1) return 10;

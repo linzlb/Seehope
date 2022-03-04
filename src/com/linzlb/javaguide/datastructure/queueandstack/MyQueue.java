@@ -6,7 +6,7 @@ import java.util.Stack;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/1/27 19:06
- * @Function:ÓÃ2¸öÕ»ÊµÏÖ1¸ö¶ÓÁĞ£¬Íê³É¶ÓÁĞµÄpushºÍpop²Ù×÷
+ * @Function:ç”¨2ä¸ªæ ˆå®ç°1ä¸ªé˜Ÿåˆ—ï¼Œå®Œæˆé˜Ÿåˆ—çš„pushå’Œpopæ“ä½œ
  */
 public class MyQueue {
     Stack<Integer> s1 = new Stack<>();
@@ -17,11 +17,11 @@ public class MyQueue {
     }
 
     public int pop(){
-        //Èç¹ûÁ½¸ö¶ÓÁĞ¶¼Îª¿ÕÔòÅ×³öÒì³££¬ËµÃ÷ÓÃ»§Ã»ÓĞpush½øÈÎºÎÔªËØ
+        //å¦‚æœä¸¤ä¸ªé˜Ÿåˆ—éƒ½ä¸ºç©ºåˆ™æŠ›å‡ºå¼‚å¸¸ï¼Œè¯´æ˜ç”¨æˆ·æ²¡æœ‰pushè¿›ä»»ä½•å…ƒç´ 
         if(s1.empty() && s2.empty()){
             throw new RuntimeException("Queue is empty.");
         }
-        //Èç¹ûs2²»Îª¿ÕÖ±½Ó¶Ôs2½øĞĞpop²Ù×÷
+        //å¦‚æœs2ä¸ä¸ºç©ºç›´æ¥å¯¹s2è¿›è¡Œpopæ“ä½œ
         if (s2.empty()){
             while (!s1.empty()){
                 s2.push(s1.pop());

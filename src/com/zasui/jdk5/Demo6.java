@@ -3,9 +3,6 @@ package com.zasui.jdk5;
 import java.util.HashMap;
 import java.util.Vector;
 
-/*
- * ·ºÐÍ
- */
 public class Demo6 {
 	public static void main(String[] args) {
 		Vector < String > list = new Vector < String > ();

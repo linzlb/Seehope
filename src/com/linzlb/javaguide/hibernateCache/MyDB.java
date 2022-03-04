@@ -6,7 +6,6 @@ import java.util.List;
 public class MyDB {
 	private static List<Student> list = new ArrayList<Student>();
 
-	//初始化数据库,假设有三个学生
 	static{
 		Student s1 = new Student();
 		s1.setId(1);
@@ -28,6 +27,6 @@ public class MyDB {
 				return s;
 			}
 		}
-		return null;// 在数据库中没有.
+		return null;
 	}
 }

@@ -5,9 +5,6 @@ import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/**
- * �ö�д��ʵ�ֻ���
- */
 public class CacheDemo {
     private Map<String, Object> cache = new HashMap<String, Object>();
 	private ReadWriteLock rwl = new ReentrantReadWriteLock();

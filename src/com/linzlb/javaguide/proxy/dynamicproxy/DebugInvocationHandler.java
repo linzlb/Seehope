@@ -5,11 +5,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * jdk¶¯Ì¬´úÀíÀà
+ * jdkåŠ¨æ€ä»£ç†ç±»
  */
 public class DebugInvocationHandler implements InvocationHandler {
     /**
-     * ´úÀíÀàÖĞµÄÕæÊµ¶ÔÏó
+     * ä»£ç†ç±»ä¸­çš„çœŸå®å¯¹è±¡
      */
     private final Object target;
 
@@ -19,10 +19,10 @@ public class DebugInvocationHandler implements InvocationHandler {
 
 
     public Object invoke(Object proxy, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
-        //µ÷ÓÃ·½·¨Ö®Ç°£¬ÎÒÃÇ¿ÉÒÔÌí¼Ó×Ô¼ºµÄ²Ù×÷
+        //è°ƒç”¨æ–¹æ³•ä¹‹å‰ï¼Œæˆ‘ä»¬å¯ä»¥æ·»åŠ è‡ªå·±çš„æ“ä½œ
         System.out.println("before method " + method.getName());
         Object result = method.invoke(target, args);
-        //µ÷ÓÃ·½·¨Ö®ºó£¬ÎÒÃÇÍ¬Ñù¿ÉÒÔÌí¼Ó×Ô¼ºµÄ²Ù×÷
+        //è°ƒç”¨æ–¹æ³•ä¹‹åï¼Œæˆ‘ä»¬åŒæ ·å¯ä»¥æ·»åŠ è‡ªå·±çš„æ“ä½œ
         System.out.println("after method " + method.getName());
         return result;
     }

@@ -4,7 +4,7 @@ package com.linzlb.javaguide.algorithm.leetcode;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/1/27 14:13
- * @Function:½«×Ö·û´®×ªÎªÕûÊı£¬²»Ê¹ÓÃapi
+ * @Function:å°†å­—ç¬¦ä¸²è½¬ä¸ºæ•´æ•°ï¼Œä¸ä½¿ç”¨api
  */
 public class Str2int {
 
@@ -13,7 +13,7 @@ public class Str2int {
             return 0;
         }
         char[] chars = str.toCharArray();
-        //ÅĞ¶Ï·ûºÅ
+        //åˆ¤æ–­ç¬¦å·
         int flag = 0;
         if (chars[0] == '+'){
             flag = 1;
@@ -27,7 +27,7 @@ public class Str2int {
                 int temp = chars[i]-'0';
                 result = result*10+temp;
             }else {
-                return 0;//´æÔÚ·ÇÊı×Ö
+                return 0;//å­˜åœ¨éæ•°å­—
             }
         }
         return flag==2?-result:result;

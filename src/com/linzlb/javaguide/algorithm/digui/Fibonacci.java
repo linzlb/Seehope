@@ -13,7 +13,7 @@ public class Fibonacci {
 	}
 
 	static int fibonacci(int n){
-		//ì³²¨ÄÇÆõËã·¨£º
+		//digui
 		if(n<=1) return 1;
 		return fibonacci(n-1)+fibonacci(n-2);
 	} 

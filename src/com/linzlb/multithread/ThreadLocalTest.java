@@ -3,7 +3,7 @@ package com.linzlb.multithread;
 import java.util.Random;
 
 /**
- * 6.ThreadLocal�࡫
+ * 6.ThreadLocal
  */
 public class ThreadLocalTest {
 

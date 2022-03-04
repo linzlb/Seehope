@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-//java5�в�������̳߳ؼ���ʱ��
+//java5 ThreadPool
 public class ThreadPoolTest {
 
 	public static void main(String[] args) {
@@ -14,9 +14,9 @@ public class ThreadPoolTest {
 	}
 
 	private void threadPool(){
-		//ExecutorService threadPool = Executors.newFixedThreadPool(3);//�̶��̳߳أ�ͬʱֻ��3���̣߳�10������Ļ���ֻ��ͬʱ����3������
-		//ExecutorService threadPool = Executors.newCachedThreadPool();//�����߳����Ƕ�̬��
-		ExecutorService threadPool = Executors.newSingleThreadExecutor();//���ʵ���߳������������������������
+		//ExecutorService threadPool = Executors.newFixedThreadPool(3);
+		//ExecutorService threadPool = Executors.newCachedThreadPool();
+		ExecutorService threadPool = Executors.newSingleThreadExecutor();
 		for(int i=1;i<=10;i++){
 			final int task = i;
 			threadPool.execute(new Runnable(){
@@ -41,6 +41,6 @@ public class ThreadPoolTest {
 			public void run() {
 				System.out.println("bombing!");
 			}
-		}, 6, 2, TimeUnit.SECONDS);	//��ʱ����6�뿪ʼ��ÿ���������һ��
+		}, 6, 2, TimeUnit.SECONDS);
 	}
 }

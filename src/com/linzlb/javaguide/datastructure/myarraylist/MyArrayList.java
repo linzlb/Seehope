@@ -8,14 +8,14 @@ package com.linzlb.javaguide.datastructure.myarraylist;
  */
 public class MyArrayList {
 
-    //·ÇË½ÓĞ£¬ÒÔ¼ò»¯Ç¶Ì×Àà·ÃÎÊ
-    //transient ÔöÒÑ¾­ÊµÏÖµÄĞòÁĞ»¯µÄÀàÖĞ£¬²»ÔÊĞíÄ³±äÁ¿ĞòÁĞ»¯
+    //éç§æœ‰ï¼Œä»¥ç®€åŒ–åµŒå¥—ç±»è®¿é—®
+    //transient å¢å·²ç»å®ç°çš„åºåˆ—åŒ–çš„ç±»ä¸­ï¼Œä¸å…è®¸æŸå˜é‡åºåˆ—åŒ–
     transient Object[] elementData;
 
-    //Ä¬ÈÏÈİÁ¿
+    //é»˜è®¤å®¹é‡
     private static final int DEFAULT_CAPACICT = 10;
 
-    //¿ÕÊµÀıµÄ¿ÕÊı×é
+    //ç©ºå®ä¾‹çš„ç©ºæ•°ç»„
     private static final Object[] EMPTY_ELEMENTDATA = {};
 
     //ArrayList.size()
@@ -29,7 +29,7 @@ public class MyArrayList {
             this.elementData = EMPTY_ELEMENTDATA;
         } else {
             throw new IllegalArgumentException("Illegal Capacity:" +
-                initCapacity);
+                    initCapacity);
         }
     }
 
@@ -38,53 +38,53 @@ public class MyArrayList {
     }
 
     public void add(Object o){
-        //1.ÅĞ¶ÏÊı¾İÈİÁ¿ÊÇ·ñ´óÓÚ elementData,´óÓÚĞèÒªÀ©Èİ
+        //1.åˆ¤æ–­æ•°æ®å®¹é‡æ˜¯å¦å¤§äº elementData,å¤§äºéœ€è¦æ‰©å®¹
         ensureExplicitCapacity(size+1);
-        //2.¸³Öµ
+        //2.èµ‹å€¼
         elementData[size++] = o;
     }
 
     private void ensureExplicitCapacity(int minCapacity){
         if (size == elementData.length){
-            //ĞèÒªÀ©Èİ£¬À©Èİ1.5±¶, ×¢ÒâoldÖµÎª1µÄÊ±ºò
+            //éœ€è¦æ‰©å®¹ï¼Œæ‰©å®¹1.5å€, æ³¨æ„oldå€¼ä¸º1çš„æ—¶å€™
             int oldCapacity = elementData.length;
-            //½«oldCapacity ÓÒÒÆÒ»Î»£¬ÆäĞ§¹ûÏàµ±ÓÚoldCapacity /2£¬
-            //ÎÒÃÇÖªµÀÎ»ÔËËãµÄËÙ¶ÈÔ¶Ô¶¿ìÓÚÕû³ıÔËËã£¬Õû¾äÔËËãÊ½µÄ½á¹û¾ÍÊÇ½«ĞÂÈİÁ¿¸üĞÂÎª¾ÉÈİÁ¿µÄ1.5±¶£¬
+            //å°†oldCapacity å³ç§»ä¸€ä½ï¼Œå…¶æ•ˆæœç›¸å½“äºoldCapacity /2ï¼Œ
+            //æˆ‘ä»¬çŸ¥é“ä½è¿ç®—çš„é€Ÿåº¦è¿œè¿œå¿«äºæ•´é™¤è¿ç®—ï¼Œæ•´å¥è¿ç®—å¼çš„ç»“æœå°±æ˜¯å°†æ–°å®¹é‡æ›´æ–°ä¸ºæ—§å®¹é‡çš„1.5å€ï¼Œ
             int newCapacity = oldCapacity + (oldCapacity >> 1);
-            //Èç¹ûĞÂÈİÁ¿ < ×îĞ¡ÈİÁ¿ £¬½«×îĞ¡ÈİÁ¿¸³Öµ¸øĞÂÈİÁ¿
-            //Èç¹û oldCapacity=1£¬Ôò minCapacity=1+1=2 newCapacity=1+(1>>1)=1
+            //å¦‚æœæ–°å®¹é‡ < æœ€å°å®¹é‡ ï¼Œå°†æœ€å°å®¹é‡èµ‹å€¼ç»™æ–°å®¹é‡
+            //å¦‚æœ oldCapacity=1ï¼Œåˆ™ minCapacity=1+1=2 newCapacity=1+(1>>1)=1
             if (newCapacity < minCapacity){
                 newCapacity = minCapacity;
             }
-            //´´½¨ĞÂÊı×é
+            //åˆ›å»ºæ–°æ•°ç»„
             Object[] objects = new Object[newCapacity];
-            //½«Êı¾İ¸´ÖÆµ½ĞÂÊı×é
+            //å°†æ•°æ®å¤åˆ¶åˆ°æ–°æ•°ç»„
             System.arraycopy(elementData, 0, objects, 0, elementData.length);
-            //ĞŞ¸ÄÒıÓÃ
+            //ä¿®æ”¹å¼•ç”¨
             elementData = objects;
         }
     }
 
     public Object get(int index){
-        //¼ì²âÊÇ·ñÏÂ±êÔ½½ç
+        //æ£€æµ‹æ˜¯å¦ä¸‹æ ‡è¶Šç•Œ
         rangeCheck(index);
         return elementData[index];
     }
 
     private void rangeCheck(int index){
         if (index >= size){
-            throw new IndexOutOfBoundsException("ÏÂ±êÔ½½ç");
+            throw new IndexOutOfBoundsException("ä¸‹æ ‡è¶Šç•Œ");
         }
     }
 
     public Object remove(int index){
         rangeCheck(index);
-        //²éÕÒÔªËØ
+        //æŸ¥æ‰¾å…ƒç´ 
         Object oldValue = elementData[index];
-        //ÕÒ³öÖÃ»»½áÊøÎ»ÖÃ
+        //æ‰¾å‡ºç½®æ¢ç»“æŸä½ç½®
         int numMoved = size - index - 1;
         if (numMoved > 0){
-            //´Óindex+1¿ªÊ¼£¬½«Öµ¸²¸ÇÎªindex-numMovedµÄÖµ
+            //ä»index+1å¼€å§‹ï¼Œå°†å€¼è¦†ç›–ä¸ºindex-numMovedçš„å€¼
             System.arraycopy(elementData, index+1, elementData, index, numMoved);
         }
         elementData[--size] = null;//clear to let GC do its work

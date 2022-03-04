@@ -2,26 +2,26 @@ package com.linzlb.javaguide.algorithm.gongyeshu;
 
 import java.util.Scanner;
 
-/*Çó2¸öÊıµÄ×î´ó¹«Ô¼ÊıºÍ×îĞ¡¹«±¶Êı*/
+/*æ±‚2ä¸ªæ•°çš„æœ€å¤§å…¬çº¦æ•°å’Œæœ€å°å…¬å€æ•°*/
 public class YueshuBeishu {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÇëÊäÈëµÚÒ»¸öÊı£º");
+		System.out.println("è¯·è¾“å…¥ç¬¬ä¸€ä¸ªæ•°ï¼š");
 		int num1 = scanner.nextInt();
-		System.out.println("ÇëÊäÈëµÚ¶ş¸öÊı£º");
+		System.out.println("è¯·è¾“å…¥ç¬¬äºŒä¸ªæ•°ï¼š");
 		int num2 = scanner.nextInt();
 		int big = big(num1,num2);
 		int small = small(num1,num2);
 		if(big==0 || small==0){
-			System.out.println("Çó×î´ó¹«Ô¼ÊıÊ±£¬³ıÊı²»ÄÜÎª0");
+			System.out.println("æ±‚æœ€å¤§å…¬çº¦æ•°æ—¶ï¼Œé™¤æ•°ä¸èƒ½ä¸º0");
 		}else{
-			System.out.println(num1+"ºÍ"+num2+"µÄ×î´ó¹«Ô¼ÊıÊÇ£º"+big);
-			System.out.println(num1+"ºÍ"+num2+"µÄ×îĞ¡¹«±¶ÊıÊÇ£º"+small);
+			System.out.println(num1+"å’Œ"+num2+"çš„æœ€å¤§å…¬çº¦æ•°æ˜¯ï¼š"+big);
+			System.out.println(num1+"å’Œ"+num2+"çš„æœ€å°å…¬å€æ•°æ˜¯ï¼š"+small);
 		}
 	}
 
-	/*Çó×î´ó¹«Ô¼Êı£º½Ï´óµÄÊı³ıÒÔ½ÏĞ¡µÄÊı£¬È»ºó½«½ÏĞ¡µÄÊı×÷ÎªÏÂÒ»´ÎµÄ´óÊı£¬
-	ÓàÊı×÷ÎªĞ¡Êı£¬Ö±µ½½ÏĞ¡µÄÊıÎª0£¬·µ»Ø½Ï´óµÄÊı*/
+	/*æ±‚æœ€å¤§å…¬çº¦æ•°ï¼šè¾ƒå¤§çš„æ•°é™¤ä»¥è¾ƒå°çš„æ•°ï¼Œç„¶åå°†è¾ƒå°çš„æ•°ä½œä¸ºä¸‹ä¸€æ¬¡çš„å¤§æ•°ï¼Œ
+	ä½™æ•°ä½œä¸ºå°æ•°ï¼Œç›´åˆ°è¾ƒå°çš„æ•°ä¸º0ï¼Œè¿”å›è¾ƒå¤§çš„æ•°*/
 	public static int big(int num1,int num2){
 		int big = 0;
 		int small = 0;
@@ -33,7 +33,7 @@ public class YueshuBeishu {
 			big = num2;
 		}
 		if(small==0){
-			System.out.println("³ıÊı²»ÄÜÎª0");
+			System.out.println("é™¤æ•°ä¸èƒ½ä¸º0");
 			return 0;
 		}
 		while(true){
@@ -46,17 +46,17 @@ public class YueshuBeishu {
 			}
 		}
 	}
-	
-	//Çó×îĞ¡¹«±¶Êı£ºÁ½ÊıÖ®»ı³ıÒÔ×î´ó¹«Ô¼Êı
+
+	//æ±‚æœ€å°å…¬å€æ•°ï¼šä¸¤æ•°ä¹‹ç§¯é™¤ä»¥æœ€å¤§å…¬çº¦æ•°
 	public static int small(int num1,int num2){
 		int big = big(num1,num2);
 		if(big==0){
-			System.out.println("Çó×î´ó¹«Ô¼ÊıÊ±£¬³ıÊı²»ÄÜÎª0");
+			System.out.println("æ±‚æœ€å¤§å…¬çº¦æ•°æ—¶ï¼Œé™¤æ•°ä¸èƒ½ä¸º0");
 			return 0;
 		}else{
 			return(num1*num2)/big;
 		}
-		
+
 	}
-	  
+
 }

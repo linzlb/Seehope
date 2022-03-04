@@ -5,7 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * 2.��ͳ��ʱ������
+ * 2.TimerTask
  */
 public class TraditionalTimerTest {
 
@@ -47,7 +47,6 @@ public class TraditionalTimerTest {
 	}
 }
 
-//�����룬��4�룬������
 class MyTimerTask extends TimerTask{
 	private static int count = 0;
 	

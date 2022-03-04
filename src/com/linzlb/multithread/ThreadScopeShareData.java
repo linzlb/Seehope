@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * 5.�̷߳�Χ�ڹ������
+ * 5.ThreadScopeShareData
  */
 public class ThreadScopeShareData {
 

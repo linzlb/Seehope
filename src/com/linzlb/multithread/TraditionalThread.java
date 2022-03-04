@@ -1,7 +1,7 @@
 package com.linzlb.multithread;
 
 /**
- * @function 1.��ͳ�����̵߳ķ���
+ * @function 1Traditional
  * @author linzlb
  * @date 20170402
  */
@@ -61,7 +61,6 @@ public class TraditionalThread {
 		}.start();
 	}
 
-	//new Thread(runnable.run1) {run2}.start();���ֽṹ���ṹ��run2�����run2�����ǣ�����run1
 	private static void newThread4(){
 		new Thread(new Runnable() {
 			

@@ -6,13 +6,13 @@ import java.util.Arrays;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/1/27 10:55
- * @Function:²éÕÒ×î³¤¹«¹²Ç°×º£¬Ã»ÓĞ¾Í·µ»Ø""
- * Ë¼Â·£ºÀûÓÃArray.sortÎªÊı×éÅÅĞò£¬ÔÙ½«Êı×éµÚÒ»¸öÔªËØºÍ×îºóÒ»¸öÔªËØ±È½Ï
+ * @Function:æŸ¥æ‰¾æœ€é•¿å…¬å…±å‰ç¼€ï¼Œæ²¡æœ‰å°±è¿”å›""
+ * æ€è·¯ï¼šåˆ©ç”¨Array.sortä¸ºæ•°ç»„æ’åºï¼Œå†å°†æ•°ç»„ç¬¬ä¸€ä¸ªå…ƒç´ å’Œæœ€åä¸€ä¸ªå…ƒç´ æ¯”è¾ƒ
  */
 public class FindLongestPublicPrefix {
 
     public static String find(String[] strs){
-        //1.¼ì²éÒì³££¬²»ºÏ·¨µÄ·µ»Ø""
+        //1.æ£€æŸ¥å¼‚å¸¸ï¼Œä¸åˆæ³•çš„è¿”å›""
         if(!check(strs)){
             return "";
         }
@@ -33,7 +33,7 @@ public class FindLongestPublicPrefix {
         return result.toString();
     }
 
-    //¼ì²éÊı×éÊÇ·ñºÏ·¨
+    //æ£€æŸ¥æ•°ç»„æ˜¯å¦åˆæ³•
     public static boolean check(String[] strs){
         boolean flag = false;
         if(strs != null){

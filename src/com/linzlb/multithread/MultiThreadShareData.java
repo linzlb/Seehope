@@ -1,9 +1,6 @@
 package com.linzlb.multithread;
 
-/**
- * 7.����̹߳������ݵķ�ʽ
- * ���4���̣߳�����2���̶߳�j����1������2����jÿ�μ���1
- */
+
 public class MultiThreadShareData {
 
 	public static void main(String[] args) {

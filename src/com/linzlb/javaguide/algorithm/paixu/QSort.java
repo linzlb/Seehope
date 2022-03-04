@@ -1,65 +1,65 @@
 package com.linzlb.javaguide.algorithm.paixu;
-/*¿ìËÙÅÅĞòË¼Ïë£º
-Ò»ÌË¿ìËÙÅÅĞòÊÇ£º
-1£¬Ëæ»ú²úÉúÒ»ÊıÁĞ£¬Ñ¡È¡µÚÒ»¸öÊı£¨ÕâÀïÒ²¿ÉÑ¡ÆäËûµÄÊı£©×÷Îª±È½ÏµÄ»ùÊ¯£¬¼ÙÉèÕâ¸öÊıÎªX,ÕâÑùX=A[0]£»ÉèÁ½¸ö±äÁ¿i=0£¬j=n-1£»nÊÇÕâ¸öÊıÁĞµÄ³¤¶È
-2£¬´ÓÇ°Ãæ¿ªÊ¼ÕÒ£¬ÕÒµ½µÚÒ»¸ö±ÈA[0]´óµÄÊı£¬ÕÒµ½ÁË¾ÍÓëX½»»»
-3£¬´ÓºóÃæ¿ªÊ¼ÕÒ£¬ÕÒµ½µÚÒ»¸ö±ÈA[0]Ğ¡µÄÊı£¬ÕÒµ½ÁË¾ÍÓëX½»»»
-4£¬ÖØ¸´²½Öè2£¬3£¬Ö±µ½i=j£»
-ÕâÑùÒ»ÌË¿ìËÙÅÅĞò¾ÍÍê³ÉÁË£»µÚÒ»ÌËÍê³ÉÖ®ºó£¬X×ó±ßµÄÊı¾ÍÈ«²¿Ğ¡ÓÚXÁË£¬XÓÒ±ßµÄÊı¾ÅÈ«²¿´óÓÚX£¬È»ºó²ÉÓÃµİ¹é·½Ê½¶ÔX×ó±ßµÄÊıºÍXÓÒ±ßµÄÊı½øĞĞ¿ìËÙÅÅĞò¡£ */
-public class QSort {   
-    /**  
-       * @param pData ĞèÒªÅÅĞòµÄÊı×é  
-       * @param left  ×ó±ßµÄÎ»ÖÃ,³õÊ¼ÖµÎª0  
-       * @param right ÓÒ±ßµÄÎ»ÖÃ,³õÊ¼ÖµÎªÊı×é³¤¶È  
-       */   
-      public static void QuickSort(int[] pData,int left,int right)   
-      {   
-        int i,j;   
-        int first,temp;   
-        i = left;   
-        j = right;   
-        first = pData[left]; //ÕâÀïÑ¡ÆäËûµÄÊıÒ²ĞĞ£¬²»¹ıÒ»°ãÑ¡µÚÒ»¸ö  
-        //Ò»ÌË¿ìËÙÅÅĞò   
-        while(true)   
-        {   
-        //´ÓµÚ¶ş¸öÊı¿ªÊ¼ÕÒ´óÓÚÖĞÊàµÄÊı ,´ÓÇ°Ãæ¿ªÊ¼ÕÒ´óÓÚpData[left]µÄÊı  
-            while((++i)<right-1 && pData[i]<first);   
-            //´Ó×îºóÒ»¸öÊı¿ªÊ¼ÕÒµÚÒ»¸öĞ¡ÓÚÖĞÊàpData[left]µÄÊı   
-            while((--j)>left && pData[j]>first);   
-            if(i>=j)   
-                break;   
-            //½»»»Á½±ßÕÒµ½µÄÊı   
-            temp = pData[i];   
-            pData[i] = pData[j];   
-            pData[j] = temp;   
-     
-        }   
-        //½»»»ÖĞÊà   
-        pData[left] = pData[j];   
-        pData[j] = first;   
-        //µİ¹é¿ìÅÅÖĞÊà×ó±ßµÄÊı¾İ   
-        if(left<j)   
-          QuickSort(pData,left,j);   
-        //µİ¹é¿ìÅÅÖĞÊàÓÒ±ßµÄÊı¾İ   
-        if(right>i)   
-          QuickSort(pData,i,right);   
-      }   
-     
-      public static void main(String[] args){   
-       
-         int [] pData = new int[5];   
-         for(int i = 0; i< 5; i++)   
-              pData[i] = (int)(Math.random()*100);//Produce 10 random integers   
-           
-          for(int i = 0; i<pData.length; i++){   
-              System.out.print(pData[i]+" ");    
-          }  
-          QSort.QuickSort(pData, 0, pData.length);   
-           
-          System.out.println("\n***********************");   
-           
-          for(int i = 0; i<pData.length; i++){   
-              System.out.print(pData[i]+" ");   
-          }  
-      }    
- }  
+/*å¿«é€Ÿæ’åºæ€æƒ³ï¼š
+ä¸€è¶Ÿå¿«é€Ÿæ’åºæ˜¯ï¼š
+1ï¼Œéšæœºäº§ç”Ÿä¸€æ•°åˆ—ï¼Œé€‰å–ç¬¬ä¸€ä¸ªæ•°ï¼ˆè¿™é‡Œä¹Ÿå¯é€‰å…¶ä»–çš„æ•°ï¼‰ä½œä¸ºæ¯”è¾ƒçš„åŸºçŸ³ï¼Œå‡è®¾è¿™ä¸ªæ•°ä¸ºX,è¿™æ ·X=A[0]ï¼›è®¾ä¸¤ä¸ªå˜é‡i=0ï¼Œj=n-1ï¼›næ˜¯è¿™ä¸ªæ•°åˆ—çš„é•¿åº¦
+2ï¼Œä»å‰é¢å¼€å§‹æ‰¾ï¼Œæ‰¾åˆ°ç¬¬ä¸€ä¸ªæ¯”A[0]å¤§çš„æ•°ï¼Œæ‰¾åˆ°äº†å°±ä¸Xäº¤æ¢
+3ï¼Œä»åé¢å¼€å§‹æ‰¾ï¼Œæ‰¾åˆ°ç¬¬ä¸€ä¸ªæ¯”A[0]å°çš„æ•°ï¼Œæ‰¾åˆ°äº†å°±ä¸Xäº¤æ¢
+4ï¼Œé‡å¤æ­¥éª¤2ï¼Œ3ï¼Œç›´åˆ°i=jï¼›
+è¿™æ ·ä¸€è¶Ÿå¿«é€Ÿæ’åºå°±å®Œæˆäº†ï¼›ç¬¬ä¸€è¶Ÿå®Œæˆä¹‹åï¼ŒXå·¦è¾¹çš„æ•°å°±å…¨éƒ¨å°äºXäº†ï¼ŒXå³è¾¹çš„æ•°ä¹å…¨éƒ¨å¤§äºXï¼Œç„¶åé‡‡ç”¨é€’å½’æ–¹å¼å¯¹Xå·¦è¾¹çš„æ•°å’ŒXå³è¾¹çš„æ•°è¿›è¡Œå¿«é€Ÿæ’åºã€‚ */
+public class QSort {
+    /**
+     * @param pData éœ€è¦æ’åºçš„æ•°ç»„
+     * @param left  å·¦è¾¹çš„ä½ç½®,åˆå§‹å€¼ä¸º0
+     * @param right å³è¾¹çš„ä½ç½®,åˆå§‹å€¼ä¸ºæ•°ç»„é•¿åº¦
+     */
+    public static void QuickSort(int[] pData,int left,int right)
+    {
+        int i,j;
+        int first,temp;
+        i = left;
+        j = right;
+        first = pData[left]; //è¿™é‡Œé€‰å…¶ä»–çš„æ•°ä¹Ÿè¡Œï¼Œä¸è¿‡ä¸€èˆ¬é€‰ç¬¬ä¸€ä¸ª
+        //ä¸€è¶Ÿå¿«é€Ÿæ’åº
+        while(true)
+        {
+            //ä»ç¬¬äºŒä¸ªæ•°å¼€å§‹æ‰¾å¤§äºä¸­æ¢çš„æ•° ,ä»å‰é¢å¼€å§‹æ‰¾å¤§äºpData[left]çš„æ•°
+            while((++i)<right-1 && pData[i]<first);
+            //ä»æœ€åä¸€ä¸ªæ•°å¼€å§‹æ‰¾ç¬¬ä¸€ä¸ªå°äºä¸­æ¢pData[left]çš„æ•°
+            while((--j)>left && pData[j]>first);
+            if(i>=j)
+                break;
+            //äº¤æ¢ä¸¤è¾¹æ‰¾åˆ°çš„æ•°
+            temp = pData[i];
+            pData[i] = pData[j];
+            pData[j] = temp;
+
+        }
+        //äº¤æ¢ä¸­æ¢
+        pData[left] = pData[j];
+        pData[j] = first;
+        //é€’å½’å¿«æ’ä¸­æ¢å·¦è¾¹çš„æ•°æ®
+        if(left<j)
+            QuickSort(pData,left,j);
+        //é€’å½’å¿«æ’ä¸­æ¢å³è¾¹çš„æ•°æ®
+        if(right>i)
+            QuickSort(pData,i,right);
+    }
+
+    public static void main(String[] args){
+
+        int [] pData = new int[5];
+        for(int i = 0; i< 5; i++)
+            pData[i] = (int)(Math.random()*100);//Produce 10 random integers
+
+        for(int i = 0; i<pData.length; i++){
+            System.out.print(pData[i]+" ");
+        }
+        QSort.QuickSort(pData, 0, pData.length);
+
+        System.out.println("\n***********************");
+
+        for(int i = 0; i<pData.length; i++){
+            System.out.print(pData[i]+" ");
+        }
+    }
+}

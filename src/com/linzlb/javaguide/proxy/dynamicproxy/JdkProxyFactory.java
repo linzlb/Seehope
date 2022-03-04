@@ -3,14 +3,14 @@ package com.linzlb.javaguide.proxy.dynamicproxy;
 import java.lang.reflect.Proxy;
 
 /**
- * »ñÈ¡´úÀí¶ÔÏóµÄ¹¤³§
+ * è·å–ä»£ç†å¯¹è±¡çš„å·¥å‚
  */
 public class JdkProxyFactory {
     public static Object getProxy(Object target) {
         return Proxy.newProxyInstance(
-                target.getClass().getClassLoader(), // Ä¿±êÀàµÄÀà¼ÓÔØ
-                target.getClass().getInterfaces(),  // ´úÀíĞèÒªÊµÏÖµÄ½Ó¿Ú£¬¿ÉÖ¸¶¨¶à¸ö
-                new DebugInvocationHandler(target)   // ´úÀí¶ÔÏó¶ÔÓ¦µÄ×Ô¶¨Òå InvocationHandler
+                target.getClass().getClassLoader(), // ç›®æ ‡ç±»çš„ç±»åŠ è½½
+                target.getClass().getInterfaces(),  // ä»£ç†éœ€è¦å®ç°çš„æ¥å£ï¼Œå¯æŒ‡å®šå¤šä¸ª
+                new DebugInvocationHandler(target)   // ä»£ç†å¯¹è±¡å¯¹åº”çš„è‡ªå®šä¹‰ InvocationHandler
         );
     }
 }

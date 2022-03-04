@@ -1,7 +1,7 @@
 package com.zasui.neibulei;
-//静态内部类
-//可以访问外部类的静态成员变量和方法
-//可以访问外部类的甚至private的静态变量和方法
+//闈欐�佸唴閮ㄧ被
+//鍙互璁块棶澶栭儴绫荤殑闈欐�佹垚鍛樺彉閲忓拰鏂规硶
+//鍙互璁块棶澶栭儴绫荤殑鐢氳嚦private鐨勯潤鎬佸彉閲忓拰鏂规硶
 public class Demo2 {
 	private static String userName = "Frederic";
 
@@ -12,7 +12,7 @@ public class Demo2 {
 
 	public static class Inner {
 		public void doInner() {
-			System.out.println( Demo2.userName );// 访问外部类的成员
+			System.out.println( Demo2.userName );// 璁块棶澶栭儴绫荤殑鎴愬憳
 		}
 	}
 

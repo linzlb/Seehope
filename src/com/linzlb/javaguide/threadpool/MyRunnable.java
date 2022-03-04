@@ -3,7 +3,7 @@ package com.linzlb.javaguide.threadpool;
 import java.util.Date;
 
 /**
- * ÕâÊÇÒ»¸ö¼òµ¥µÄRunnableÀà£¬ĞèÒª5ÃëÖÓÀ´Ö´ĞĞÆäÈÎÎñ¡£
+ * è¿™æ˜¯ä¸€ä¸ªç®€å•çš„Runnableç±»ï¼Œéœ€è¦5ç§’é’Ÿæ¥æ‰§è¡Œå…¶ä»»åŠ¡ã€‚
  * @author shuang.kou
  */
 public class MyRunnable implements Runnable {

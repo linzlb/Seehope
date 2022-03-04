@@ -6,12 +6,12 @@ import com.linzlb.javaguide.algorithm.leetcode.ListNode;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/1/27 17:14
- * @Function:ºÏ²¢2¸öÅÅĞòµÄÁ´±í
- * ·ÖÎö
- * Á´±íAºÍB
- * AºÍBÓĞĞò£¬A1ºÍB1±È½Ï£¬¼ÙÉèA1<B1,A1ÎªÍ·½Úµã
- * A2ºÍB1±È½Ï£¬A1Ö¸ÏòĞ¡µÄ
- * Ñ­»·Íù¸´
+ * @Function:åˆå¹¶2ä¸ªæ’åºçš„é“¾è¡¨
+ * åˆ†æ
+ * é“¾è¡¨Aå’ŒB
+ * Aå’ŒBæœ‰åºï¼ŒA1å’ŒB1æ¯”è¾ƒï¼Œå‡è®¾A1<B1,A1ä¸ºå¤´èŠ‚ç‚¹
+ * A2å’ŒB1æ¯”è¾ƒï¼ŒA1æŒ‡å‘å°çš„
+ * å¾ªç¯å¾€å¤
  */
 public class MergeSortList {
 

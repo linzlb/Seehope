@@ -10,10 +10,10 @@ public class SmsProxy implements SmsService {
 
     @Override
     public String send(String message) {
-        //调用方法之前，我们可以添加自己的操作
+        //璋冪敤鏂规硶涔嬪墠锛屾垜浠彲浠ユ坊鍔犺嚜宸辩殑鎿嶄綔
         System.out.println("before method send()");
         smsService.send(message);
-        //调用方法之后，我们同样可以添加自己的操作
+        //璋冪敤鏂规硶涔嬪悗锛屾垜浠悓鏍峰彲浠ユ坊鍔犺嚜宸辩殑鎿嶄綔
         System.out.println("after method send()");
         return null;
     }

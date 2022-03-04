@@ -1,35 +1,35 @@
 package com.linzlb.javaguide.algorithm.paixu;
 
 public class Demo2 {
-	public static void main(String[] args) { 
+	public static void main(String[] args) {
 		int[] array = {10,-3,5,34,-34,5,0,9}; //test data 
-		System.out.println("ÅÅĞòÇ°£º");
-		for(int arg : array) { 
-			System.out.print(arg + " "); 
+		System.out.println("æ’åºå‰ï¼š");
+		for(int arg : array) {
+			System.out.print(arg + " ");
 		}
-		//ÅÅĞò·½·¨
+		//æ’åºæ–¹æ³•
 		sort(array);
-		System.out.println("\nÅÅĞòºó£º");
-		for(int arg : array) { 
-			System.out.print(arg + " "); 
-		} 
-	} 
-	static void sort(int[] array) { 
-		int length = array.length; 
-		int temp; 
-		boolean isSort; 
-		for(int i = 1; i < length; i++) { 
-			isSort = false; 
-			for(int j = 0; j < length - i; j++) { 
-				if(array[j] > array[j+1]) { 
-					//½»»» 
-					temp = array[j]; 
-					array[j] = array[j+1]; 
-					array[j+1] = temp; 
-					isSort = true; 
-				} 
-			} 
-			if(!isSort) break; //Èç¹ûÃ»ÓĞ·¢Éú½»»»£¬ÔòÍË³öÑ­»· 
-		} 
-	} 
+		System.out.println("\næ’åºåï¼š");
+		for(int arg : array) {
+			System.out.print(arg + " ");
+		}
+	}
+	static void sort(int[] array) {
+		int length = array.length;
+		int temp;
+		boolean isSort;
+		for(int i = 1; i < length; i++) {
+			isSort = false;
+			for(int j = 0; j < length - i; j++) {
+				if(array[j] > array[j+1]) {
+					//äº¤æ¢
+					temp = array[j];
+					array[j] = array[j+1];
+					array[j+1] = temp;
+					isSort = true;
+				}
+			}
+			if(!isSort) break; //å¦‚æœæ²¡æœ‰å‘ç”Ÿäº¤æ¢ï¼Œåˆ™é€€å‡ºå¾ªç¯
+		}
+	}
 }

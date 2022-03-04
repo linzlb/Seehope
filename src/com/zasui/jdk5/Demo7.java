@@ -2,9 +2,6 @@ package com.zasui.jdk5;
 
 import java.util.Date;
 
-/*
- * 自定义泛型！！！
- */
 public class Demo7<T> {
 	public void printType(T t) {
 		System.out.println(t.toString());

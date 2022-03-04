@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * 10.Callable��Future��Ӧ��
+ * 10.CallableAndFuture
  */
 public class CallableAndFuture {
 
@@ -18,11 +18,9 @@ public class CallableAndFuture {
         //callableAndFuture();
 		callableAndFuture2();
 	}
-	
-	//һ������
+
 	private static void callableAndFuture(){
 		ExecutorService threadPool = Executors.newSingleThreadExecutor();
-		//callable������ܺܳ�
 		Callable<String> callable = new Callable<String>() {
 			
 			@Override
@@ -31,11 +29,10 @@ public class CallableAndFuture {
 				return "hello,linzlb";
 			}
 		};
-		//callable��������ˣ�futureȥȡ���
 		Future<String> future = threadPool.submit(callable);
-		System.out.println("�ȴ����");
+		System.out.println("---------------");
 		try {
-			System.out.println("�õ������"+future.get());
+			System.out.println("============="+future.get());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
@@ -43,24 +40,23 @@ public class CallableAndFuture {
 		}
 	}
 	
-	//һ������
+
 	private static void callableAndFuture2(){
 		ExecutorService threadPool2 =  Executors.newFixedThreadPool(10);
 		CompletionService<Integer> completionService = 
 				new ExecutorCompletionService<Integer>(threadPool2);
-		//�ύһ������
+
 		for(int i=1;i<=10;i++){
 			final int seq = i;
 			completionService.submit(new Callable<Integer>() {
 				@Override
 				public Integer call() throws Exception {
-					Thread.sleep(new Random().nextInt(5000));//������5��
+					Thread.sleep(new Random().nextInt(5000));
 					return seq;
 				}
 			});
 		}
-		
-		//����ִ����ľ��ȴ�ӡ���������������ӣ���Ƭ�����ȸ��ĸ�
+
 		for(int i=0;i<10;i++){
 			try {
 				System.out.println(

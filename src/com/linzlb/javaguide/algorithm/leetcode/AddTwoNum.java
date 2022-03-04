@@ -4,26 +4,26 @@ package com.linzlb.javaguide.algorithm.leetcode;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/1/27 14:22
- * @Function:Á½ÊıÏà¼Ó
- * ¸ø¶¨2¸ö·Ç¿ÕÁ´±íÀ´±íÊ¾2¸ö·Ç¸ºÕûÊı£¬Î»Êı°´ÕÕÄæĞò·½Ê½´æ´¢£¬Ã¿¸ö½Úµã´ú±íµ¥¸öÊı×Ö
+ * @Function:ä¸¤æ•°ç›¸åŠ 
+ * ç»™å®š2ä¸ªéç©ºé“¾è¡¨æ¥è¡¨ç¤º2ä¸ªéè´Ÿæ•´æ•°ï¼Œä½æ•°æŒ‰ç…§é€†åºæ–¹å¼å­˜å‚¨ï¼Œæ¯ä¸ªèŠ‚ç‚¹ä»£è¡¨å•ä¸ªæ•°å­—
  * eg.
  * 342+465=807
  * 2->4->3  + 5->6->4  =  7->0->8
  *
- * ¶ÔÍ·½Úµã½øĞĞ²Ù×÷Ê±£¬¿¼ÂÇ´´½¨ÑÆ½Úµãdummy£¬Ê¹ÓÃdummy->next±íÊ¾ÕæÕıµÄÍ·½Úµã£¬±ÜÃâ´¦ÀíÍ·½ÚµãÎªnullµÄ±ß½çÎÊÌâ
+ * å¯¹å¤´èŠ‚ç‚¹è¿›è¡Œæ“ä½œæ—¶ï¼Œè€ƒè™‘åˆ›å»ºå“‘èŠ‚ç‚¹dummyï¼Œä½¿ç”¨dummy->nextè¡¨ç¤ºçœŸæ­£çš„å¤´èŠ‚ç‚¹ï¼Œé¿å…å¤„ç†å¤´èŠ‚ç‚¹ä¸ºnullçš„è¾¹ç•Œé—®é¢˜
  */
 public class AddTwoNum {
 
     public ListNode add(ListNode l1, ListNode l2){
         ListNode dummyHead = new ListNode(0);
         ListNode p=l1, q=l2, curr=dummyHead;
-        int carry=0;//±íÊ¾½øÎ»
+        int carry=0;//è¡¨ç¤ºè¿›ä½
         while (p!=null || q!=null){
             int x = (p!=null)?p.val:0;
             int y = (q!=null)?q.val:0;
             int sum = carry+x+y;
             carry=sum/10;
-            //ĞÂ½ÚµãµÄÖµÎªsum%10
+            //æ–°èŠ‚ç‚¹çš„å€¼ä¸ºsum%10
             curr.next=new ListNode(sum%10);
             curr = curr.next;
             if (p!=null)
@@ -37,4 +37,3 @@ public class AddTwoNum {
         return dummyHead.next;
     }
 }
-

@@ -7,14 +7,14 @@ import java.util.HashSet;
  * @Tel: 13570921913
  * @Date: 2021/1/27 11:11
  * @Function:
- * »ØÎÄ´® ÊÇÒ»¸öÕı¶Á·´¶Á¶¼Ò»ÑùµÄ×Ö·û´®
- * ¿ÉÒÔ¹¹³É»ØÎÄ´®µÄ2¸öÇé¿ö£º
+ * å›æ–‡ä¸² æ˜¯ä¸€ä¸ªæ­£è¯»åè¯»éƒ½ä¸€æ ·çš„å­—ç¬¦ä¸²
+ * å¯ä»¥æ„æˆå›æ–‡ä¸²çš„2ä¸ªæƒ…å†µï¼š
  *  aabb  aabcc
  */
 public class PalindromicString {
     private static int index,len;
 
-    //ÊäÈë×Ö·û´®£¬¼ÆËã¿ÉÒÔ¹¹Ôì³öÀ´µÄ×î³¤»ØÎÄ´®³¤¶È
+    //è¾“å…¥å­—ç¬¦ä¸²ï¼Œè®¡ç®—å¯ä»¥æ„é€ å‡ºæ¥çš„æœ€é•¿å›æ–‡ä¸²é•¿åº¦
     public static int longestPalindrome(String s){
 
         if (s==null || s.length()==0){
@@ -34,7 +34,7 @@ public class PalindromicString {
         return hashSet.isEmpty()?count*2:count*2+1;
     }
 
-    //ÑéÖ¤ÊÇ·ñ»ØÎÄ´®,Ö»¿¼ÂÇÊı×ÖºÍÓ¢ÎÄ
+    //éªŒè¯æ˜¯å¦å›æ–‡ä¸²,åªè€ƒè™‘æ•°å­—å’Œè‹±æ–‡
     public static boolean isPalindrome(String s){
         if (s==null || s.length()==0){
             return true;
@@ -42,9 +42,9 @@ public class PalindromicString {
         int head = 0;
         int tail = s.length()-1;
         while (head<tail){
-            //´ÓÍ·ºÍÎ²ÍùÖĞ¼ä±È½Ï
+            //ä»å¤´å’Œå°¾å¾€ä¸­é—´æ¯”è¾ƒ
             if(!Character.isLetterOrDigit(s.charAt(head))){
-                //ËµÃ÷×Ö·û²»ÊÇ×ÖÄ¸»òÕßÊı×é
+                //è¯´æ˜å­—ç¬¦ä¸æ˜¯å­—æ¯æˆ–è€…æ•°ç»„
                 head++;
             }else if(!Character.isLetterOrDigit(s.charAt(tail))){
                 tail--;
@@ -60,14 +60,14 @@ public class PalindromicString {
         return true;
     }
 
-    //¸ø¶¨Ò»¸ö×Ö·û´®£¬ÕÒµ½×Ö·û´®ÖĞ×î³¤µÄ»ØÎÄ×Ó´®
+    //ç»™å®šä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œæ‰¾åˆ°å­—ç¬¦ä¸²ä¸­æœ€é•¿çš„å›æ–‡å­ä¸²
     public static String longestPalindromeSubString(String s){
         if (s == null || s.length()<2){
             return s;
         }
         for (int i=0;i<s.length();i++){
-            palindromeHelper(s,i,i);//ÆæÊı£¬ÍùÁ½±ßÕÒ
-            palindromeHelper(s,i,i+1);//Å¼Êı£¬ÍùÁ½±ßÕÒ
+            palindromeHelper(s,i,i);//å¥‡æ•°ï¼Œå¾€ä¸¤è¾¹æ‰¾
+            palindromeHelper(s,i,i+1);//å¶æ•°ï¼Œå¾€ä¸¤è¾¹æ‰¾
         }
         return s.substring(index,index+len);
     }

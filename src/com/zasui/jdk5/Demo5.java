@@ -1,6 +1,6 @@
 package com.zasui.jdk5;
 /*
- * ×Ô¶¯×°Åä
+ * åŒ…è£…ç±»
  */
 public class Demo5 {
 

@@ -6,15 +6,15 @@ import java.util.HashMap;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/2/4 14:32
- * @Function:ÓÃ×Ô¼ºÊµÏÖµÄÊı¾İ½á¹¹ÊµÏÖLRUËã·¨
+ * @Function:ç”¨è‡ªå·±å®ç°çš„æ•°æ®ç»“æ„å®ç°LRUç®—æ³•
  */
 public class LRUCache {
 
     //key -> Node(key,val)
     private HashMap<Integer, Node> map;
-    //Node(k1,v1) <->Node(k2,v2)...  ¶ÓÎ²ÊÇ×î½üÊ¹ÓÃµÄ
+    //Node(k1,v1) <->Node(k2,v2)...  é˜Ÿå°¾æ˜¯æœ€è¿‘ä½¿ç”¨çš„
     private DoubleList cache;
-    //×î´óÈİÁ¿
+    //æœ€å¤§å®¹é‡
     private int cap;
 
     public LRUCache(int cap) {
@@ -27,16 +27,16 @@ public class LRUCache {
         if (!map.containsKey(key)){
             return -1;
         }
-        //½«Êı¾İÌáÉıÎª×î½üÊ¹ÓÃµÄ
+        //å°†æ•°æ®æå‡ä¸ºæœ€è¿‘ä½¿ç”¨çš„
         makeRecently(key);
         return map.get(key).val;
     }
 
     public void put(int key, int val){
         if (map.containsKey(key)){
-            //É¾³ı¾ÉÊı¾İ
+            //åˆ é™¤æ—§æ•°æ®
             deleteKey(key);
-            //ĞÂ²åÈëµÄÊı¾İÎª×î½üÊ¹ÓÃµÄÊı¾İ
+            //æ–°æ’å…¥çš„æ•°æ®ä¸ºæœ€è¿‘ä½¿ç”¨çš„æ•°æ®
             addRecently(key, val);
             return;
         }
@@ -48,34 +48,34 @@ public class LRUCache {
     }
 
 
-    //ÏÂÃæÎª³£ÓÃ²Ù×÷
-    //½«Ä³¸ökeyÌáÉıÎª×î½üÊ¹ÓÃµÄ
+    //ä¸‹é¢ä¸ºå¸¸ç”¨æ“ä½œ
+    //å°†æŸä¸ªkeyæå‡ä¸ºæœ€è¿‘ä½¿ç”¨çš„
     private void makeRecently(int key){
-        //´ÓÁ´±íÉ¾³ıÔÙ²åÈë¶ÓÎ²
+        //ä»é“¾è¡¨åˆ é™¤å†æ’å…¥é˜Ÿå°¾
         Node x = map.get(key);
         cache.remove(x);
         cache.addLast(x);
     }
 
-    //Ìí¼Ó×î½üÊ¹ÓÃµÄÔªËØ
+    //æ·»åŠ æœ€è¿‘ä½¿ç”¨çš„å…ƒç´ 
     private void addRecently(int key, int val){
         Node x = new Node(key, val);
         cache.addLast(x);
         map.put(key,x);
     }
 
-    //É¾³ıÄ³Ò»¸ökey
+    //åˆ é™¤æŸä¸€ä¸ªkey
     private void deleteKey(int key){
         Node x = map.get(key);
         cache.remove(x);
         map.remove(key);
     }
 
-    //É¾³ı×î¾ÃÎ´Ê¹ÓÃµÄÔªËØ
+    //åˆ é™¤æœ€ä¹…æœªä½¿ç”¨çš„å…ƒç´ 
     private void removeLeastRecently(){
-        //Á´±íÍ·²¿µÄµÚÒ»¸öÔªËØ¾ÍÊÇ×î¾ÃÎ´Ê¹ÓÃ
+        //é“¾è¡¨å¤´éƒ¨çš„ç¬¬ä¸€ä¸ªå…ƒç´ å°±æ˜¯æœ€ä¹…æœªä½¿ç”¨
         Node delNode = cache.removeFirst();
-        //Í¬Ê±¼ÇµÃÉ¾³ımapÀïÃæµÄÖ¸Õë
+        //åŒæ—¶è®°å¾—åˆ é™¤mapé‡Œé¢çš„æŒ‡é’ˆ
         int delKey = delNode.key;
         map.remove(delKey);
     }

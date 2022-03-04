@@ -7,12 +7,12 @@ public class Demo1 {
 		Inner i = new Inner();
 		i.doInner();
 	}
-	//·Ç¾²Ì¬ÄÚ²¿ÀàInner
-/*¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄÉõÖÁprivateµÄ±äÁ¿ºÍ·½·¨*/
+	//éé™æ€å†…éƒ¨ç±»Inner
+	/*å¯ä»¥è®¿é—®å¤–éƒ¨ç±»çš„æˆå‘˜å˜é‡å’Œæ–¹æ³•ï¼Œå¯ä»¥è®¿é—®å¤–éƒ¨ç±»çš„ç”šè‡³privateçš„å˜é‡å’Œæ–¹æ³•*/
 	public class Inner {
 		void doInner() {
-			System.out.println( Demo1.this.userName );// ·ÃÎÊÍâ²¿ÀàµÄ³ÉÔ±
-			//System.out.println( Demo1.userName );ÕâÑùµÄ»°Ö»ÄÜ·ÃÎÊstaticµÄ±äÁ¿
+			System.out.println( Demo1.this.userName );// è®¿é—®å¤–éƒ¨ç±»çš„æˆå‘˜
+			//System.out.println( Demo1.userName );è¿™æ ·çš„è¯åªèƒ½è®¿é—®staticçš„å˜é‡
 		}
 	}
 

@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
- * 11.java5���߳�������
+ * 11.java5
  * lock/unlock
  */
 public class LockTest {

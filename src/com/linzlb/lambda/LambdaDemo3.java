@@ -12,12 +12,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * 类的详细说明
- * 如果继承某个接口{@link StateContext}，提供一个链接，方便使用
- * 如果是过期的接口，那么请尽量提供用于替换的类的链接地址{@link StateContext}
- *
- * @param <S> 如果用到泛型，可以这样注释
- * @param <E> 如果用到泛型，可以这样注释
  * @author jiangwan.lin@tuya.com
  * @since 2021-06-24 11:37 上午 / V1.0
  */

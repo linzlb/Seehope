@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /*
-12.��д��?
+12.ReadWriteLock
  */
 public class ReadWriteLockTest {
     public static void main(String[] args) {
@@ -35,10 +35,10 @@ public class ReadWriteLockTest {
 	}
 }
 class Queue{
-	private Object data = null;//�������ݣ�ֻ����һ���߳���д�����ݣ��������ж���߳�ͬʱ�������ݡ�
-	ReadWriteLock rwl = new ReentrantReadWriteLock();//ʹ��ReadWriteLock
+	private Object data = null;
+	ReadWriteLock rwl = new ReentrantReadWriteLock();
 	public void get(){
-		rwl.readLock().lock();//������ס
+		rwl.readLock().lock();
 		try {
 			System.out.println(Thread.currentThread().getName() + " be ready to read data!");
 			Thread.sleep((long)(Math.random()*1000));
@@ -46,12 +46,12 @@ class Queue{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}finally{
-			rwl.readLock().unlock();//�����ͷ�
+			rwl.readLock().unlock();
 		}
 	}
 	
 	public void put(Object data){
-		rwl.writeLock().lock();//д����ס
+		rwl.writeLock().lock();
 		try {
 			System.out.println(Thread.currentThread().getName() + " be ready to write data!");					
 			Thread.sleep((long)(Math.random()*1000));
@@ -60,7 +60,7 @@ class Queue{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}finally{
-			rwl.writeLock().unlock();//д���ͷ�
+			rwl.writeLock().unlock();
 		}
 	}
 }
