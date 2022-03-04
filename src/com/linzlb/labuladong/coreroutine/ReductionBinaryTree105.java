@@ -1,4 +1,4 @@
-package com.linzlb.labuladong.datastructure.binarytree;
+package com.linzlb.labuladong.coreroutine;
 
 import com.linzlb.labuladong.entry.TreeNode;
 
@@ -8,7 +8,7 @@ import com.linzlb.labuladong.entry.TreeNode;
  * @Date: 2022/3/4 09:50
  * @Function: leetcode 105 通过前序和中序遍历还原二叉树
  */
-public class BuildBinaryTree {
+public class ReductionBinaryTree105 {
 
     /**
      * @param preorder 前序顺序
@@ -57,7 +57,7 @@ public class BuildBinaryTree {
      [15] [7]
      */
     public static void main(String[] args) {
-        BuildBinaryTree bts = new BuildBinaryTree();
+        ReductionBinaryTree105 bts = new ReductionBinaryTree105();
         int[] preorder = new int[]{3,9,20,15,7};
         int[] inorder = new int[]{9,3,15,20,7};
         TreeNode tree = bts.buildTree(preorder, inorder);
