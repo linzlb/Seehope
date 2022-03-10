@@ -4,7 +4,7 @@ package com.linzlb.javaguide.datastructure.myarraylist;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2020/12/17 16:15
- * @Function:
+ * @Function: ArrayList自己的简单实现
  */
 public class MyArrayList {
 
