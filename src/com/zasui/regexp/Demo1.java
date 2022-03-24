@@ -22,4 +22,15 @@ public class Demo1 {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * 去除汉字英文数字外的正则
+	 */
+	public static String getName(String name){
+		name = name.replaceAll("[^A-Za-z0-9\\u4e00-\\u9fa5]", "");
+		if (name.length() > 10) {
+			name = name.substring(0,10);
+		}
+		return name;
+	}
 }
