@@ -1,5 +1,5 @@
 package com.seehope.training.day1;
-//ตÝน้
+
 public class NiuNiu {
 
 	public static void main(String[] args) {		

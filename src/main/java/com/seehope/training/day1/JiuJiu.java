@@ -1,8 +1,5 @@
 package com.seehope.training.day1;
 
-/**
- * ³Ë·¨±í
- */
 public class JiuJiu {
 	public static void main (String[] args) {
 		chengFa();

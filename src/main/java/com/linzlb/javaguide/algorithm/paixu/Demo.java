@@ -7,7 +7,7 @@ public class Demo {
 		int len = 80000;
 		int arr1[] = new int[len];
 		for(int i=0;i<len;i++){
-			//ÈÃ³ÌĞòËæ»ú²úÉúÒ»¸ö1µ½1000µÄÊı
+
 			int t = (int) (Math.random()*10000);
 			arr1[i] = t;	
 		}
@@ -22,33 +22,32 @@ public class Demo {
 		//Select s = new Select();
 		InsertSort i = new InsertSort();
 		
-		//ÔÚÅÅĞòÇ°´òÓ¡ÏµÍ³Ê±¼ä
+
 		java.util.Calendar cal = Calendar.getInstance();
-		System.out.println("ÅÅĞòÇ°£º"+cal.getTime()); 
+		System.out.println("ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½"+cal.getTime()); 
 		//s.sort(arr1);
 		//b.sort(arr1);
 		i.sort(arr1);
-		//ÖØĞÂ»ñµÃÊµÀı£¬ÒòÎªgetInstanceÊÇµ¥Ì¬µÄ¡£
+
 		cal = Calendar.getInstance();
-		System.out.println("ÅÅĞòºó£º"+cal.getTime());; 
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½"+cal.getTime());; 
 		
 	}
 
 }
 
 
-//1.Ã°ÅİÅÅĞò·¨
+
 class Bubble{
-	//ÅÅĞò·½·¨
+
 	public void sort(int arr[]){
 		int temp=0;
-		//ÅÅĞò
-		//Íâ²ãÑ­»·£¬¾ö¶¨Ò»¹²×ß¼¸´Î
+
 		for(int i=0; i<arr.length-1; i++){
-			//ÄÚ²ãÑ­»·£¬¿ªÊ¼±È½Ï£¬Ç°ÃæµÄ±ÈºóÃæµÄ´ó¾Í½»»»
+
 			for(int j=0; j<arr.length-1-i; j++){
 				if(arr[j]>arr[j+1]){
-					//»»Î»
+					//ï¿½ï¿½Î»
 					temp = arr[j];
 					arr[j] = arr[j+1];
 					arr[j+1] = temp;
@@ -58,24 +57,21 @@ class Bubble{
 	}
 }
 
-//2.Ñ¡ÔñÅÅĞò·¨,Ã¿´ÎÕÒµ½×îĞ¡·ÅÔÚÇ°Ãæ¡£Ò»Ö±Ñ­»·ÏÂÈ¥
 class Select{
 	public void sort(int arr[]){
-		//ÈÏÎªµÚÒ»¸öÊÇ×îĞ¡µÄ
+
 		int temp=0;
 		for(int j=0;j<arr.length-1;j++){
 		
 			int min = arr[j];
-			//¼ÇÂ¼×îĞ¡ÊıµÄÏÂ±ê
 			int minIndex = j;
 			for(int k=j+1;k<arr.length;k++){
 				if(min>arr[k]){
-					//ĞŞ¸Ä×îĞ¡
 					min=arr[k];
 					minIndex=k;
 				}
 			}
-			//µ±ÍË³öforÑ­»·ºó¾ÍÕÒµ½Õâ´ÎµÄ×îĞ¡Öµ
+
 			temp=arr[j];
 			arr[j]=arr[minIndex];
 			arr[minIndex]=temp;
@@ -84,20 +80,19 @@ class Select{
 }
 
 
-//3.²åÈëÅÅĞò·¨
 class InsertSort{
 	public void sort(int arr[]){
 		for(int i=1;i<arr.length;i++){
 			int insertVal=arr[i];
-			//insertVal×¼±¸ºÍÇ°Ò»¸öÊı±È½Ï
+
 			int index=i-1;
 			while(index>=0&&insertVal<arr[index]){
-				//½«°Ñarr[index]ÏòºóÒÆ¶¯
+
 				arr[index+1]=arr [index];
-				//ÈÃindexÏòÇ°ÒÆ¶¯
+
 				index--;
 			}
-			//½«insertVal²åÈëµ½ÊÊµ±Î»ÖÃ
+
 			arr[index+1]=insertVal;
 		}
 	}

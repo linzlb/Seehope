@@ -1,8 +1,6 @@
 package com.seehope.training.day1;
 
-/**
- * 构造方法
- */
+
 public class Testthis {
 	int a, b, c;
 	

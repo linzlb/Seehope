@@ -1,8 +1,6 @@
 package com.seehope.training.day2;
 
-/**
- * Object π”√
- */
+
 public class TestYinYong{
 	public static void main(String[] args){
 		Student stu = new Student();
